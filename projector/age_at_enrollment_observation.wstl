@@ -1,0 +1,29 @@
+
+// Definition: Construct basic Observation representing age at enrollment
+//
+// Arguments:
+//  study - This is the full study object created by Whistler
+//  subject_id - This is the participant ID which will be used to build a proper reference to the Patient resource
+//  
+def AgeAtEnrollmentObservation(study, subject) {
+    var subject_id: subject.subjid;
+    var age_at: subject.age;
+
+    if (age_at?) {
+        meta.tag[]: StudyMeta(study);
+
+        identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", subject_id, ".", "age"));
+        identifier[0].use: "official";
+
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+        // Technically, this is supposed to work, but it doesn't
+        // basedOn[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "subject_phenotype", "Age at enrollment (d)"));
+        code.text: HarmonizedLocalDisplay("age", "subject_phenotype");
+        code.coding[]: HarmonizeMapped("age", "subject_phenotype");
+        code.coding[]: LocalCodeSystemReference(study.id, "subject_phenotype", "Age");
+        
+        _valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "decade");
+        status: "final";
+        resourceType: "Observation";
+    }
+}

@@ -1,0 +1,24 @@
+//
+
+def DeathCircumstances_HardyScale(study, subject) {
+    var subject_id: subject.subjid;
+    var dthhrdy: subject.dthhrdy;
+
+    if (dthhrdy?) {
+        meta.tag[]: StudyMeta(study);
+
+        identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", subject_id, ".", "dthhrdy"));
+        identifier[0].use: "official";
+
+        subject: Reference_Key_Identifier(study, "Patient", subject_id);
+        code.text: HarmonizedLocalDisplay("dthhrdy", "subject_phenotype");
+        code.coding[]: HarmonizeMapped("dthhrdy", "subject_phenotype");
+        code.coding[]: LocalCodeSystemReference(study.id, "subject_phenotype", "dthhrdy");
+
+        valueCodeableConcept.coding: HarmonizeMapped(dthhrdy, "DTHHRDY");
+        valueCodeableConcept.text: dthhrdy;
+        status: "final";
+        resourceType: "Observation";        
+    }
+
+}

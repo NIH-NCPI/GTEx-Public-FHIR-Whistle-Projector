@@ -1,0 +1,51 @@
+// Specimen use the standard FHIR Specimen resource with a few potential specialized 
+// interpretations of the standard properties:
+//   * parent - If the specimen type is derived from another, the "parent" specimen is referenced here
+//   * processing[x].additive - References to the appropriate Substance associated with the preservation_method
+//   * aliquots are stored inside the .container array
+//
+def ProcessSpecimen(study, specimen, subject_id) {
+    // We may not get subject id or it's name will change. This is based on 
+    // RJC example but the final dataset may look very different.
+    var sample_id: specimen.sampid;
+
+    meta.tag[]: StudyMeta(study);
+    
+    // add labID to identifier as separate entry???
+    identifier[0]: Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, sample_id));
+    identifier[0].use: "official";
+
+    if (specimen.dbgap_sample_id?) {
+        identifier[1].system: "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/variable.cgi?study_id=phs000744.v4.p2&phv=202584"
+        identifier[1].value: specimen.dbgap_sample_id;
+    }
+
+    // It looks like meen is also using SMAFRZE to capture DNA and RNA sample types
+    // I'm holding off on this until we have time and get confirmation from Robert to move 
+    // forward with it
+    if (specimen.smtsd?) {
+        type.coding: HarmonizeMapped(specimen.smtsd, "smtsd");
+        type.text: specimen.smtsd;
+    }
+
+    if (specimen.smubrid?) {
+        collection.bodySite.coding: HarmonizeMapped(specimen.smubrid, "smubrid");
+    }
+
+    // Meen took average of the date range and stored it here. That is 
+    // not available in specimen file and there is no way to link these
+    // two in whistler at the moment since there is no actual subjid in
+    // the sample_attributes. that column is inferred based on the sample ID
+    collection._collectedDateTime.extension[0] (if specimen.age_at_collection ~= "NA" and specimen.age_at_collection ~= "#N/A"): AgeAtExtension(study, subject_id, specimen.age_at_collection, "days");
+
+    subject: Reference_Key_Identifier(study, "Patient", subject_id);
+    resourceType: "Specimen";    
+
+}
+
+def ProcessSpecimenData(study, sample) {
+    var idcomponents: $StrSplit(sample.sampid, "-");
+    var subject_id: $StrCat(idcomponents[0], "-", idcomponents[1]);
+    out specimen: ProcessSpecimen(study, sample, subject_id);
+    out file_meta: ProcessFileMetadata(study, subject_id, sample, sample.file_manifest[]);
+}

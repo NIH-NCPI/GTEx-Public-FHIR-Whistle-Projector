@@ -1,0 +1,188 @@
+local code,text,table_name,parent_varname,local code system,code,display,code system,comment
+FAMMEMB,Family Member,subject,subject,FamilyRelationship,FAMMEMB,family member,http://terminology.hl7.org/CodeSystem/v3-RoleCode,
+1,Male,subject_phenotype,Sex,Sex,male,Male,http://hl7.org/fhir/administrative-gender,
+2,Female,subject_phenotype,Sex,Sex,female,Female,http://hl7.org/fhir/administrative-gender,
+bam,BAM File,sequencing,seq_filename,DataType,Aligned-Reads,Aligned Reads,https://nih-ncpi.github.io/ncpi-fhir-ig/data_types,
+gvcf,gvcf,sequencing,seq_filename,DataType,gVCF,gVCF,https://nih-ncpi.github.io/ncpi-fhir-ig/data_types,
+Controlled,Controlled,sequencing,access_type,access_type,controlled,Controlled,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
+Registered,Registered,sequencing,access_type,access_type,registered,Registered,https://includedcc.org/fhir/code-systems/data_access_types,https://docs.google.com/spreadsheets/d/1_qbnn1VVlQS0tGprkiJbOhHZFixvs2qAVj5Rrdi2EaU/edit#gid=857513026
+WHOLE_GENOME,Whole Genome Sequencing,sequencing,exome_capture_platform,DataCategory,Genomics,Genomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
+WGS,Whole Genome Sequencing,sequencing,sequencing_assay,ExperimentStrategy,WGS,Whole Genome,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
+DNA,DNA,sequencing,analyte_type,SampleType,OBI:0001051,DNA extract,http://purl.obolibrary.org/obo/obi.owl,
+0,Ventilator Case,subject_phenotype,DTHHRDY,DTHHRDY,Ventilator-Case,Ventilator Case,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
+1,Violent and fast death,subject_phenotype,DTHHRDY,DTHHRDY,Violent-fast-death,Violent and fast death,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
+2,Fast death of natural causes,subject_phenotype,DTHHRDY,DTHHRDY,Fast-death-of-natural-causes,Fast death of natural causes,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
+3,Intermediate death,subject_phenotype,DTHHRDY,DTHHRDY,Intermediate-death,Intermediate death,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
+4,Slow death,subject_phenotype,DTHHRDY,DTHHRDY,Slow-death,Slow death,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
+EXCLUDE,Exclude,sample_attributes,SMAFRZE_,SMAFRZE_,??,??,https://includedcc.org/fhir/code-systems/experimental_strategies
+OMNI,Omni,sample_attributes,SMAFRZE,ExperimentStrategy,Omni,Omni Platform,https://includedcc.org/fhir/code-systems/experimental_strategies
+RNASEQ,RNA-Seq,sample_attributes,SMAFRZE,ExperimentStrategy,RNA-Seq,RNA-Seq,https://includedcc.org/fhir/code-systems/experimental_strategies
+WES,WES,sample_attributes,SMAFRZE,ExperimentStrategy,WES,Whole Exome Sequencing,https://includedcc.org/fhir/code-systems/experimental_strategies
+WGS,WGS,sample_attributes,SMAFRZE,ExperimentStrategy,GWS,Whole Genome Sequencing,https://includedcc.org/fhir/code-systems/experimental_strategies
+Whole Blood,Whole Blood,sample_attributes,smtsd,smtsd,C41067,Whole Blood,http://purl.obolibrary.org/obo/ncit.owl
+Blood,Blood,sample_attributes,smts,smts,119297000,Blood specimen (specimen),http://snomed.info/sct
+0013756,0013756,sample_attributes,smubrid,smubrid,0013756,venous blood,http://purl.obolibrary.org/obo/uberon.owl
+0013756,0013756,sample_attributes,smubrid,smubrid,C78730,Venous Blood,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Frontal Cortex (BA9),Brain - Frontal Cortex (BA9),sample_attributes,smtsd,smtsd,C177766,Frontal Lobe Cortex,http://purl.obolibrary.org/obo/ncit.owl
+0009834,0009834,sample_attributes,smubrid,smubrid,0009834,dorsolateral prefrontal cortex,http://purl.obolibrary.org/obo/uberon.owl
+0009834,0009834,sample_attributes,smubrid,smubrid,C12443,Cerebral Cortex,http://purl.obolibrary.org/obo/ncit.owl
+Adipose - Subcutaneous,Adipose - Subcutaneous,sample_attributes,smtsd,smtsd,C33645,Subcutis,http://purl.obolibrary.org/obo/ncit.owl
+0002190,0002190,sample_attributes,smubrid,smubrid,0002190,subcutaneous adipose tissue,http://purl.obolibrary.org/obo/uberon.owl
+0002190,0002190,sample_attributes,smubrid,smubrid,C12472,Adipose Tissue,http://purl.obolibrary.org/obo/ncit.owl
+Muscle - Skeletal,Muscle - Skeletal,sample_attributes,smtsd,smtsd,C13050,Skeletal Muscle Tissue,http://purl.obolibrary.org/obo/ncit.owl
+Muscle,Muscle,sample_attributes,smts,smts,705054005,Muscle specimen (specimen),http://snomed.info/sct
+0011907,0011907,sample_attributes,smubrid,smubrid,0011907,gastrocnemius medialis,http://purl.obolibrary.org/obo/uberon.owl
+0011907,0011907,sample_attributes,smubrid,smubrid,C32666,Gastrocnemius Muscle,http://purl.obolibrary.org/obo/ncit.owl
+Artery - Tibial,Artery - Tibial,sample_attributes,smtsd,smtsd,C12824,Tibial Artery,http://purl.obolibrary.org/obo/ncit.owl
+0007610,0007610,sample_attributes,smubrid,smubrid,0007610,tibial artery,http://purl.obolibrary.org/obo/uberon.owl
+0007610,0007610,sample_attributes,smubrid,smubrid,C12824,Tibial Artery,http://purl.obolibrary.org/obo/ncit.owl
+Artery - Coronary,Artery - Coronary,sample_attributes,smtsd,smtsd,C12843,Coronary Artery,http://purl.obolibrary.org/obo/ncit.owl
+0001621,0001621,sample_attributes,smubrid,smubrid,0001621,coronary artery,http://purl.obolibrary.org/obo/uberon.owl
+0001621,0001621,sample_attributes,smubrid,smubrid,C12843,Coronary Artery,http://purl.obolibrary.org/obo/ncit.owl
+Heart - Atrial Appendage,Heart - Atrial Appendage,sample_attributes,smtsd,smtsd,C13023,Heart Part,http://purl.obolibrary.org/obo/ncit.owl
+0006631,0006631,sample_attributes,smubrid,smubrid,0006631,right atrium auricular region,http://purl.obolibrary.org/obo/uberon.owl
+0006631,0006631,sample_attributes,smubrid,smubrid,C12868,Right Atrium,http://purl.obolibrary.org/obo/ncit.owl
+Adipose - Visceral (Omentum),Adipose - Visceral (Omentum),sample_attributes,smtsd,smtsd,C33209,Omentum,http://purl.obolibrary.org/obo/ncit.owl
+0010414,0010414,sample_attributes,smubrid,smubrid,0010414,omental fat pad,http://purl.obolibrary.org/obo/uberon.owl
+0010414,0010414,sample_attributes,smubrid,smubrid,C33209,Omentum,http://purl.obolibrary.org/obo/ncit.owl
+Ovary,Ovary,sample_attributes,smtsd,smtsd,C12404,Ovary,http://purl.obolibrary.org/obo/ncit.owl
+0000992,0000992,sample_attributes,smubrid,smubrid,0000992,ovary,http://purl.obolibrary.org/obo/uberon.owl
+0000992,0000992,sample_attributes,smubrid,smubrid,C12404,Ovary,http://purl.obolibrary.org/obo/ncit.owl
+Uterus,Uterus,sample_attributes,smtsd,smtsd,C12405,Uterus,http://purl.obolibrary.org/obo/ncit.owl
+0000995,0000995,sample_attributes,smubrid,smubrid,0000995,uterus,http://purl.obolibrary.org/obo/uberon.owl
+0000995,0000995,sample_attributes,smubrid,smubrid,C12405,Uterus,http://purl.obolibrary.org/obo/ncit.owl
+Vagina,Vagina,sample_attributes,smtsd,smtsd,C12407,Vagina,http://purl.obolibrary.org/obo/ncit.owl
+0000996,0000996,sample_attributes,smubrid,smubrid,0000996,vagina,http://purl.obolibrary.org/obo/uberon.owl
+0000996,0000996,sample_attributes,smubrid,smubrid,C12407,Vagina,http://purl.obolibrary.org/obo/ncit.owl
+Breast - Mammary Tissue,Breast - Mammary Tissue,sample_attributes,smtsd,smtsd,C12370,Mammary Gland Tissue,http://purl.obolibrary.org/obo/ncit.owl
+0008367,0008367,sample_attributes,smubrid,smubrid,0008367,breast epithelium,http://purl.obolibrary.org/obo/uberon.owl
+0008367,0008367,sample_attributes,smubrid,smubrid,C12971,Breast,http://purl.obolibrary.org/obo/ncit.owl
+Skin - Not Sun Exposed (Suprapubic),Skin - Not Sun Exposed (Suprapubic),sample_attributes,smtsd,smtsd,C126736,Suprapubic Skin,http://purl.obolibrary.org/obo/ncit.owl
+0036149,0036149,sample_attributes,smubrid,smubrid,0036149,suprapubic skin,http://purl.obolibrary.org/obo/uberon.owl
+0036149,0036149,sample_attributes,smubrid,smubrid,C126736,Suprapubic Skin,http://purl.obolibrary.org/obo/ncit.owl
+Minor Salivary Gland,Minor Salivary Gland,sample_attributes,smtsd,smtsd,C33129,Minor Salivary Gland,http://purl.obolibrary.org/obo/ncit.owl
+0006330,0006330,sample_attributes,smubrid,smubrid,0006330,anterior lingual gland,http://purl.obolibrary.org/obo/uberon.owl
+0006330,0006330,sample_attributes,smubrid,smubrid,C32987,Lingual Salivary Gland,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Cortex,Brain - Cortex,sample_attributes,smtsd,smtsd,C12443,Cerebral Cortex,http://purl.obolibrary.org/obo/ncit.owl
+0001870,0001870,sample_attributes,smubrid,smubrid,0001870,frontal cortex,http://purl.obolibrary.org/obo/uberon.owl
+0001870,0001870,sample_attributes,smubrid,smubrid,C177766,Frontal Lobe Cortex,http://purl.obolibrary.org/obo/ncit.owl
+Adrenal Gland,Adrenal Gland,sample_attributes,smtsd,smtsd,C12666,Adrenal Gland,http://purl.obolibrary.org/obo/ncit.owl
+0002369,0002369,sample_attributes,smubrid,smubrid,0002369,adrenal gland,http://purl.obolibrary.org/obo/uberon.owl
+0002369,0002369,sample_attributes,smubrid,smubrid,C12666,Adrenal Gland,http://purl.obolibrary.org/obo/ncit.owl
+Thyroid,Thyroid,sample_attributes,smtsd,smtsd,C12400,Thyroid Gland,http://purl.obolibrary.org/obo/ncit.owl
+0002046,0002046,sample_attributes,smubrid,smubrid,0002046,thyroid gland,http://purl.obolibrary.org/obo/uberon.owl
+0002046,0002046,sample_attributes,smubrid,smubrid,C12400,Thyroid Gland,http://purl.obolibrary.org/obo/ncit.owl
+Lung,Lung,sample_attributes,smtsd,smtsd,C12468,Lung,http://purl.obolibrary.org/obo/ncit.owl
+0008952,0008952,sample_attributes,smubrid,smubrid,0008952,upper lobe of left lung,http://purl.obolibrary.org/obo/uberon.owl
+0008952,0008952,sample_attributes,smubrid,smubrid,C33021,Upper Lobe of the Left Lung,http://purl.obolibrary.org/obo/ncit.owl
+Spleen,Spleen,sample_attributes,smtsd,smtsd,C12432,Spleen,http://purl.obolibrary.org/obo/ncit.owl
+0002106,0002106,sample_attributes,smubrid,smubrid,0002106,spleen,http://purl.obolibrary.org/obo/uberon.owl
+0002106,0002106,sample_attributes,smubrid,smubrid,C12432,Spleen,http://purl.obolibrary.org/obo/ncit.owl
+Pancreas,Pancreas,sample_attributes,smtsd,smtsd,C12393,Pancreas,http://purl.obolibrary.org/obo/ncit.owl
+0001150,0001150,sample_attributes,smubrid,smubrid,0001150,body of pancreas,http://purl.obolibrary.org/obo/uberon.owl
+0001150,0001150,sample_attributes,smubrid,smubrid,C12270,Body of the Pancreas,http://purl.obolibrary.org/obo/ncit.owl
+Esophagus - Muscularis,Esophagus - Muscularis,sample_attributes,smtsd,smtsd,C32540,Esophageal Muscularis Mucosa,http://purl.obolibrary.org/obo/ncit.owl
+0004648,0004648,sample_attributes,smubrid,smubrid,0004648,esophagus muscularis mucosa,http://purl.obolibrary.org/obo/uberon.owl
+0004648,0004648,sample_attributes,smubrid,smubrid,C32540,Esophageal Muscularis Mucosa,http://purl.obolibrary.org/obo/ncit.owl
+Esophagus - Mucosa,Esophagus - Mucosa,sample_attributes,smtsd,smtsd,C32538,Esophageal Mucosa,http://purl.obolibrary.org/obo/ncit.owl
+0006920,0006920,sample_attributes,smubrid,smubrid,0006920,esophagus squamous epithelium,http://purl.obolibrary.org/obo/uberon.owl
+0006920,0006920,sample_attributes,smubrid,smubrid,C49222,Esophageal Squamous Epithelium,http://purl.obolibrary.org/obo/ncit.owl
+Esophagus - Gastroesophageal Junction,Esophagus - Gastroesophageal Junction,sample_attributes,smtsd,smtsd,C32668,Gastroesophageal Junction,http://purl.obolibrary.org/obo/ncit.owl
+0004550,0004550,sample_attributes,smubrid,smubrid,0004550,gastroesophageal sphincter,http://purl.obolibrary.org/obo/uberon.owl
+0004550,0004550,sample_attributes,smubrid,smubrid,C33009,Lower Esophageal Sphincter,http://purl.obolibrary.org/obo/ncit.owl
+Stomach,Stomach,sample_attributes,smtsd,smtsd,C12391,Stomach,http://purl.obolibrary.org/obo/ncit.owl
+0000945,0000945,sample_attributes,smubrid,smubrid,0000945,stomach,http://purl.obolibrary.org/obo/uberon.owl
+0000945,0000945,sample_attributes,smubrid,smubrid,C12391,Stomach,http://purl.obolibrary.org/obo/ncit.owl
+Colon - Sigmoid,Colon - Sigmoid,sample_attributes,smtsd,smtsd,C12384,Sigmoid Colon,http://purl.obolibrary.org/obo/ncit.owl
+0001159,0001159,sample_attributes,smubrid,smubrid,0001159,sigmoid colon,http://purl.obolibrary.org/obo/uberon.owl
+0001159,0001159,sample_attributes,smubrid,smubrid,C12384,Sigmoid Colon,http://purl.obolibrary.org/obo/ncit.owl
+Small Intestine - Terminal Ileum,Small Intestine - Terminal Ileum,sample_attributes,smtsd,smtsd,C33757,Terminal Ileum,http://purl.obolibrary.org/obo/ncit.owl
+0001211,0001211,sample_attributes,smubrid,smubrid,0001211,Peyer's patch,http://purl.obolibrary.org/obo/uberon.owl
+0001211,0001211,sample_attributes,smubrid,smubrid,C12771,Peyer Patch,http://purl.obolibrary.org/obo/ncit.owl
+Colon - Transverse,Colon - Transverse,sample_attributes,smtsd,smtsd,C12385,Transverse Colon,http://purl.obolibrary.org/obo/ncit.owl
+0001157,0001157,sample_attributes,smubrid,smubrid,0001157,transverse colon,http://purl.obolibrary.org/obo/uberon.owl
+0001157,0001157,sample_attributes,smubrid,smubrid,C12385,Transverse Colon,http://purl.obolibrary.org/obo/ncit.owl
+Prostate,Prostate,sample_attributes,smtsd,smtsd,C12410,Prostate Gland,http://purl.obolibrary.org/obo/ncit.owl
+0002367,0002367,sample_attributes,smubrid,smubrid,0002367,prostate gland,http://purl.obolibrary.org/obo/uberon.owl
+0002367,0002367,sample_attributes,smubrid,smubrid,C12410,Prostate Gland,http://purl.obolibrary.org/obo/ncit.owl
+Testis,Testis,sample_attributes,smtsd,smtsd,C12412,Testis,http://purl.obolibrary.org/obo/ncit.owl
+0000473,0000473,sample_attributes,smubrid,smubrid,0000473,testis,http://purl.obolibrary.org/obo/uberon.owl
+0000473,0000473,sample_attributes,smubrid,smubrid,C12412,Testis,http://purl.obolibrary.org/obo/ncit.owl
+Skin - Sun Exposed (Lower leg),Skin - Sun Exposed (Lower leg),sample_attributes,smtsd,smtsd,C52749,Leg Skin,http://purl.obolibrary.org/obo/ncit.owl
+0004264,0004264,sample_attributes,smubrid,smubrid,0004264,lower leg skin,http://purl.obolibrary.org/obo/uberon.owl
+0004264,0004264,sample_attributes,smubrid,smubrid,C52749,Leg Skin,http://purl.obolibrary.org/obo/ncit.owl
+Nerve - Tibial,Nerve - Tibial,sample_attributes,smtsd,smtsd,C52809,Tibial Nerve,http://purl.obolibrary.org/obo/ncit.owl
+0001323,0001323,sample_attributes,smubrid,smubrid,0001323,tibial nerve,http://purl.obolibrary.org/obo/uberon.owl
+0001323,0001323,sample_attributes,smubrid,smubrid,C52809,Tibial Nerve,http://purl.obolibrary.org/obo/ncit.owl
+Heart - Left Ventricle,Heart - Left Ventricle,sample_attributes,smtsd,smtsd,C12871,Left Ventricle,http://purl.obolibrary.org/obo/ncit.owl
+0006566,0006566,sample_attributes,smubrid,smubrid,0006566,left ventricle myocardium,http://purl.obolibrary.org/obo/uberon.owl
+0006566,0006566,sample_attributes,smubrid,smubrid,C119295,Ventricular Wall of the Heart,http://purl.obolibrary.org/obo/ncit.owl
+Pituitary,Pituitary,sample_attributes,smtsd,smtsd,C12399,Pituitary Gland,http://purl.obolibrary.org/obo/ncit.owl
+0000007,0000007,sample_attributes,smubrid,smubrid,0000007,pituitary gland,http://purl.obolibrary.org/obo/uberon.owl
+0000007,0000007,sample_attributes,smubrid,smubrid,C12399,Pituitary Gland,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Cerebellum,Brain - Cerebellum,sample_attributes,smtsd,smtsd,C12445,Cerebellum,http://purl.obolibrary.org/obo/ncit.owl
+0002037,0002037,sample_attributes,smubrid,smubrid,0002037,cerebellum,http://purl.obolibrary.org/obo/uberon.owl
+0002037,0002037,sample_attributes,smubrid,smubrid,C12445,Cerebellum,http://purl.obolibrary.org/obo/ncit.owl
+Cells - Cultured fibroblasts,Cells - Cultured fibroblasts,sample_attributes,smtsd,smtsd,C12482,Fibroblast,http://purl.obolibrary.org/obo/ncit.owl
+EFO_0002009,EFO_0002009,sample_attributes,smubrid,smubrid,0002009,fibroblast derived cell line,http://www.ebi.ac.uk/efo/efo.obo
+EFO_0002009,EFO_0002009,sample_attributes,smubrid,smubrid,C16403,Cell Line,http://purl.obolibrary.org/obo/ncit.owl
+Artery - Aorta,Artery - Aorta,sample_attributes,smtsd,smtsd,C12669,Aorta,http://purl.obolibrary.org/obo/ncit.owl
+0001496,0001496,sample_attributes,smubrid,smubrid,0001496,ascending aorta,http://purl.obolibrary.org/obo/uberon.owl
+0001496,0001496,sample_attributes,smubrid,smubrid,C32150,Ascending Aorta,http://purl.obolibrary.org/obo/ncit.owl
+Cells - EBV-transformed lymphocytes,Cells - EBV-transformed lymphocytes,sample_attributes,smtsd,smtsd,C80283,EBV-Transformed Mature B-Lymphocyte,http://purl.obolibrary.org/obo/ncit.owl
+EFO_0000572,EFO_0000572,sample_attributes,smubrid,smubrid,0000572,lymphoblast,http://www.ebi.ac.uk/efo/efo.obo
+EFO_0000572,EFO_0000572,sample_attributes,smubrid,smubrid,C13013,Lymphoblast,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Cerebellar Hemisphere,Brain - Cerebellar Hemisphere,sample_attributes,smtsd,smtsd,C12351,Cerebral Hemisphere,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Caudate (basal ganglia),Brain - Caudate (basal ganglia),sample_attributes,smtsd,smtsd,C12447,Basal Ganglia,http://purl.obolibrary.org/obo/ncit.owl
+0001873,0001873,sample_attributes,smubrid,smubrid,0001873,caudate nucleus,http://purl.obolibrary.org/obo/uberon.owl
+0001873,0001873,sample_attributes,smubrid,smubrid,C12451,Caudate Nucleus,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Nucleus accumbens (basal ganglia),Brain - Nucleus accumbens (basal ganglia),sample_attributes,smtsd,smtsd,C52733,Accumbens Nucleus,http://purl.obolibrary.org/obo/ncit.owl
+0001882,0001882,sample_attributes,smubrid,smubrid,0001882,nucleus accumbens,http://purl.obolibrary.org/obo/uberon.owl
+0001882,0001882,sample_attributes,smubrid,smubrid,C52733,Accumbens Nucleus,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Putamen (basal ganglia),Brain - Putamen (basal ganglia),sample_attributes,smtsd,smtsd,C12452,Putamen,http://purl.obolibrary.org/obo/ncit.owl
+0001874,0001874,sample_attributes,smubrid,smubrid,0001874,putamen,http://purl.obolibrary.org/obo/uberon.owl
+0001874,0001874,sample_attributes,smubrid,smubrid,C12452,Putamen,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Hypothalamus,Brain - Hypothalamus,sample_attributes,smtsd,smtsd,C12458,Hypothalamus,http://purl.obolibrary.org/obo/ncit.owl
+0001898,0001898,sample_attributes,smubrid,smubrid,0001898,hypothalamus,http://purl.obolibrary.org/obo/uberon.owl
+0001898,0001898,sample_attributes,smubrid,smubrid,C12458,Hypothalamus,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Spinal cord (cervical c-1),Brain - Spinal cord (cervical c-1),sample_attributes,smtsd,smtsd,C12464,Spinal Cord,http://purl.obolibrary.org/obo/ncit.owl
+0006469,0006469,sample_attributes,smubrid,smubrid,0006469,C1 segment of cervical spinal cord,http://purl.obolibrary.org/obo/uberon.owl
+0006469,0006469,sample_attributes,smubrid,smubrid,C12892,Cervical Spinal Cord,http://purl.obolibrary.org/obo/ncit.owl
+Liver,Liver,sample_attributes,smtsd,smtsd,C12392,Liver,http://purl.obolibrary.org/obo/ncit.owl
+0001114,0001114,sample_attributes,smubrid,smubrid,0001114,right lobe of liver,http://purl.obolibrary.org/obo/uberon.owl
+0001114,0001114,sample_attributes,smubrid,smubrid,C33481,Right Lobe of the Liver,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Hippocampus,Brain - Hippocampus,sample_attributes,smtsd,smtsd,C12444,Hippocampus,http://purl.obolibrary.org/obo/ncit.owl
+0001954,0001954,sample_attributes,smubrid,smubrid,0001954,Ammon's horn,http://purl.obolibrary.org/obo/uberon.owl
+0001954,0001954,sample_attributes,smubrid,smubrid,C32374,Cornu Ammonis,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Anterior cingulate cortex (BA24),Brain - Anterior cingulate cortex (BA24),sample_attributes,smtsd,smtsd,C139185,Anterior Cingulate Cortex,http://purl.obolibrary.org/obo/ncit.owl
+0009835,0009835,sample_attributes,smubrid,smubrid,0009835,anterior cingulate cortex,http://purl.obolibrary.org/obo/uberon.owl
+0009835,0009835,sample_attributes,smubrid,smubrid,C52713,Cingulate Cortex,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Substantia nigra,Brain - Substantia nigra,sample_attributes,smtsd,smtsd,C12453,Substantia Nigra,http://purl.obolibrary.org/obo/ncit.owl
+0002038,0002038,sample_attributes,smubrid,smubrid,0002038,substantia nigra,http://purl.obolibrary.org/obo/uberon.owl
+0002038,0002038,sample_attributes,smubrid,smubrid,C12453,Substantia Nigra,http://purl.obolibrary.org/obo/ncit.owl
+Kidney - Cortex,Kidney - Cortex,sample_attributes,smtsd,smtsd,C12739,Renal Cortex,http://purl.obolibrary.org/obo/ncit.owl
+0001225,0001225,sample_attributes,smubrid,smubrid,0001225,cortex of kidney,http://purl.obolibrary.org/obo/uberon.owl
+0001225,0001225,sample_attributes,smubrid,smubrid,C12739,Renal Cortex,http://purl.obolibrary.org/obo/ncit.owl
+Brain - Amygdala,Brain - Amygdala,sample_attributes,smtsd,smtsd,C12440,Amygdala,http://purl.obolibrary.org/obo/ncit.owl
+0001876,0001876,sample_attributes,smubrid,smubrid,0001876,amygdala,http://purl.obolibrary.org/obo/uberon.owl
+0001876,0001876,sample_attributes,smubrid,smubrid,C12440,Amygdala,http://purl.obolibrary.org/obo/ncit.owl
+Cervix - Ectocervix,Cervix - Ectocervix,sample_attributes,smtsd,smtsd,C12310,Ectocervix,http://purl.obolibrary.org/obo/ncit.owl
+0012249,0012249,sample_attributes,smubrid,smubrid,0012249,ectocervix,http://purl.obolibrary.org/obo/uberon.owl
+0012249,0012249,sample_attributes,smubrid,smubrid,C12310,Ectocervix,http://purl.obolibrary.org/obo/ncit.owl
+Fallopian Tube,Fallopian Tube,sample_attributes,smtsd,smtsd,C12403,Fallopian Tube,http://purl.obolibrary.org/obo/ncit.owl
+0003889,0003889,sample_attributes,smubrid,smubrid,0003889,fallopian tube,http://purl.obolibrary.org/obo/uberon.owl
+0003889,0003889,sample_attributes,smubrid,smubrid,C12403,Fallopian Tube,http://purl.obolibrary.org/obo/ncit.owl
+Cervix - Endocervix,Cervix - Endocervix,sample_attributes,smtsd,smtsd,C12309,Endocervix,http://purl.obolibrary.org/obo/ncit.owl
+0000458,0000458,sample_attributes,smubrid,smubrid,0000458,endocervix,http://purl.obolibrary.org/obo/uberon.owl
+0000458,0000458,sample_attributes,smubrid,smubrid,C12309,Endocervix,http://purl.obolibrary.org/obo/ncit.owl
+Bladder,Bladder,sample_attributes,smtsd,smtsd,C12414,Bladder,http://purl.obolibrary.org/obo/ncit.owl
+0001255,0001255,sample_attributes,smubrid,smubrid,0001255,urinary bladder,http://purl.obolibrary.org/obo/uberon.owl
+0001255,0001255,sample_attributes,smubrid,smubrid,C12414,Bladder,http://purl.obolibrary.org/obo/ncit.owl
+Kidney - Medulla,Kidney - Medulla,sample_attributes,smtsd,smtsd,C12740,Renal Medulla,http://purl.obolibrary.org/obo/ncit.owl
+0001293,0001293,sample_attributes,smubrid,smubrid,0001293,outer medulla of kidney,http://purl.obolibrary.org/obo/uberon.owl
+0001293,0001293,sample_attributes,smubrid,smubrid,C12740,Renal Medulla,http://purl.obolibrary.org/obo/ncit.owl
+Cells - Leukemia cell line (CML),Cells - Leukemia cell line (CML),sample_attributes,smtsd,smtsd,C16403,Cell Line,http://purl.obolibrary.org/obo/ncit.owl
+Bone Marrow,Bone Marrow,sample_attributes,smts,smts,19359002,Bone marrow specimen (specimen),http://snomed.info/sct
+EFO_0002067,EFO_0002067,sample_attributes,smubrid,smubrid,0002067,K562,http://www.ebi.ac.uk/efo/efo.obo
+EFO_0002067,EFO_0002067,sample_attributes,smubrid,smubrid,C19437,K-562,http://purl.obolibrary.org/obo/ncit.owl
+

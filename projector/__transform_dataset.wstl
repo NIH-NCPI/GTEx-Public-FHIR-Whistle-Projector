@@ -1,0 +1,23 @@
+
+
+def Transform_Dataset(resource) {
+    if (resource.study?) {
+        $this (if resource.code-systems?): ProcessCodeSystem(resource.study, resource.code-systems[]);
+        $this (if resource.study.data-dictionary?): ProcessDatasetDefinitions(resource.study, resource.study.data-dictionary[]);
+    }
+    if resource.harmony? {
+        $this: ProcessDDHarmony(resource.study, resource.harmony[]);
+    }
+    if resource.subject_phenotypes? {
+        $this: ProcessParticipant(resource.study, resource.subject_phenotypes[]);
+        $this: ProcessGroup(resource.study, resource.subject_phenotypes[*]);
+        $this: ProcessStudy(resource.study);
+        $this: ProcessResearchSubject(resource.study, resource.subject_phenotypes[]);
+    }
+
+    if resource.sample_attributes? {
+        var sequencing_centers: $Unique(resource.sample_attributes[*].smcenter);
+        $this: ProcessSequencingCenter(resource.study, sequencing_centers[]);
+        $this: ProcessSpecimenData(resource.study, resource.sample_attributes[]);
+    }
+}

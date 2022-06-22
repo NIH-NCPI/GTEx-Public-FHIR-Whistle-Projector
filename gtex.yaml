@@ -1,0 +1,55 @@
+study_id: GTEx
+study_accession:  phs000424
+study_title: Genotype-Tissue Expression (GTEx)
+study_desc: This study contains open access data from the The Genotype-Tissue Expression (GTEx) project. More details can be found at [www.gtexportal.org](http://www.gtexportal.org).
+study_sponsor:
+  id: nhgri
+  name: National Human Genome Research Institude (NHGRI)
+url: https://gtexportal.org
+identifier_prefix: https://anvilproject.org/gtex/fhir
+output_filename: gtex-v8
+id_colname: SUBJID
+whistle_src: _gtex.wstl
+code_harmonization_dir: harmony
+require_official: True
+curies:
+  http://purl.obolibrary.org/obo/uberon.owl: UBERON
+projector_lib: projector
+dataset:
+  subject_phenotypes: 
+    filename: data/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt
+    delimiter: "\t"
+    data_dictionary: 
+      filename:  data/subject_phenotype-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/gtex-harmony.csv
+  sample_attributes: 
+    filename: data/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt
+    delimiter: "\t"
+    data_dictionary: 
+      filename:  data/GTEx_Analysis_v8_Annotations_SampleAttributesDD.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/gtex-harmony.csv
+  file_manifest: 
+    filename: data/file_manifest.csv
+    embed:
+      dataset: sample_attributes
+      colname: sampid
+    data_dictionary: 
+      filename:  data/file_manifest-dd.csv
+      colnames:
+        varname: varname
+        desc: vardesc
+        type: type
+        values: values
+    code_harmonization: harmony/gtex-harmony.csv
+active_tables:
+  ALL: true

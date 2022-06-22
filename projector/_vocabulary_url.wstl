@@ -1,0 +1,18 @@
+// Description: Constructs a valid NCPI Vocabulary URL 
+//
+// Arguments:
+//  study_id - unique ID associated with that study
+//  table_name - The table name associated with this vocabulary
+//  varname - The variable if this vocabulary describes the values associated 
+//            with an actual variable's contents as opposed to members in a 
+//            table
+//   
+// Please note that currently, varname can be an empty string, but it MUST 
+// be present. 
+def VocabularyURL(required study_id, required table_name, varname) {
+  if ($IsNil(varname)) {
+    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/", study_id, "/", table_name);
+  } else {
+    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/", study_id, "/", table_name, "/", varname); 
+  }
+}
