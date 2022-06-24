@@ -55,7 +55,13 @@ def DdVariable(study, table_name, dd_entry, permDataType) {
 def BuildObservationDefReference(study, table_name, dd_var) {
     $this: Reference_Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, table_name, dd_var.varname));
 }
-
+def ADVocabularyURL(required study_id, required table_name, varname) {
+  if ($IsNil(varname)) {
+    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/data-table/", study_id, "/", table_name);
+  } else {
+    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/data-table/", study_id, "/", table_name, "/", varname); 
+  }
+}
 // Description: Build ActivityDefinition which acts as the data-dictionary representation 
 //              of an entire table's set of ObservationDefinitions
 //
@@ -72,7 +78,7 @@ def DdTable(study, dd_entry) {
     identifier[0].use: "official";
     name: $StrCat(study.id, ".", dd_entry.table_name, "-vars");
     title: $StrCat("Variables for table ", study.id, ".", dd_entry.table_name);
-    url: VocabularyURL(study.id, dd_entry.table_name, "");
+    url: ADVocabularyURL(study.id, dd_entry.table_name, "");
     topic[0].coding[0].code: "C0035168";
     topic[0].coding[0].display: "Research";
     topic[0].coding[0].system: "https://uts.nlm.nih.gov/uts/umls";
