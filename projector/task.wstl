@@ -1,0 +1,104 @@
+// Task
+def TaskReferenceID(study, sampleid) {
+    $this: $StrCat(study.id, ".", sampleid);
+}
+
+def InOutComponent(component_type, component_value) {
+    if (component_type = "Reference") {
+        type.coding[].code: "Reference";
+        valueReference: component_value;
+    }
+}
+
+def InOutFileReferences(study, manifest) {
+    $this: InOutComponent("Reference",  Reference_Key_Identifier(study, "DocumentReference", DocumentReferenceID(study, manifest.filename)));
+}
+
+def InOutQuantityComponent(study, tablename, varname, value) {
+
+    if (value?) {
+        type.coding[0].code: varname;
+        type.coding[0].system: VocabularyURL(study.id, tablename, "");
+        valueQuantity.value: $ParseFloat(value);
+    }
+}
+
+def SpecimenTask(study, subject_id, sample) {
+    // I'm mimicking brian's tasks, and he's not using profiles for them. 
+    // They were probably created before google added support for them. However,
+    // rather than dealing with loading a model and all of that, I'm keeping it
+    // simple to avoid any unexpected hurdles since there is only a few work hours
+    // remaining before the data is going to be used
+    if ($ListLen(sample.file_manifest) > 0) {
+        meta.tag[]: StudyMeta(study);
+
+        identifier[]: Key_Identifier(study, "Task", TaskReferenceID(study, sample.sampid));
+        identifier[0].use: "official";
+
+        status: "accepted";
+        intent: "unknown";
+        resourceType: "Task";
+
+        // Focus is the sample used for the task being performed
+        focus: Reference_Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, sample.sampid));
+
+        // For links the task to the patient
+        for: Reference_Key_Identifier(study, "Patient", subject_id);
+
+        // Input relates to whatever was used by the task during it's execution
+        input[]: InOutComponent("Reference", Reference_Key_Identifier(study, "Specimen", BuildSpecimenIdentifier(study, subject_id, sample.sampid)));
+
+        output[]: InOutFileReferences(study, sample.file_manifest[]);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME2MPRT", sample.sme2mprt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMCHMPRS", sample.smchmprs);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMNTRART", sample.smntrart);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMNUMGPS", sample.smnumgps);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMAPRT", sample.smmaprt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMEXNCRT", sample.smexncrt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SM550NRM", sample.sm550nrm);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMGNSDTC", sample.smgnsdtc);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMUNMPRT", sample.smunmprt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SM350NRM", sample.sm350nrm);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMRDLGTH", sample.smrdlgth);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMNCPB", sample.smmncpb);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME1MMRT", sample.sme1mmrt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMSFLGTH", sample.smsflgth);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMESTLBS", sample.smestlbs);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMPPD", sample.smmppd);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMNTERRT", sample.smnterrt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMRRNANM", sample.smrrnanm);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMRDTTL", sample.smrdttl);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMVQCFL", sample.smvqcfl);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMNCV", sample.smmncv);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMTRSCPT", sample.smtrscpt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMPPDPR", sample.smmppdpr);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMCGLGTH", sample.smcglgth);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMGAPPCT", sample.smgappct);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMUNPDRD", sample.smunpdrd);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMNTRNRT", sample.smntrnrt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMPUNRT", sample.smmpunrt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMEXPEFF", sample.smexpeff);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMPPDUN", sample.smmppdun);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME2MMRT", sample.sme2mmrt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME2ANTI", sample.sme2anti);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMALTALG", sample.smaltalg);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME2SNSE", sample.sme2snse);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMMFLGTH", sample.smmflgth);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMSPLTRD", sample.smspltrd);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME1ANTI", sample.sme1anti);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMBSMMRT", sample.smbsmmrt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME1SNSE", sample.sme1snse);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME1PCTS", sample.sme1pcts);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMRRNART", sample.smrrnart);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME1MPRT", sample.sme1mprt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMNUM5CD", sample.smnum5cd);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SMDPMPRT", sample.smdpmprt);
+        output[]: InOutQuantityComponent(study, "sample_attributes", "SME2PCTS", sample.sme2pcts);    //
+    }
+}
+
+def ProcessSpecimenTask(study, sample) {
+    var idcomponents: $StrSplit(sample.sampid, "-");
+    var subject_id: $StrCat(idcomponents[0], "-", idcomponents[1]);
+    out files: SpecimenTask(study, subject_id, sample);
+}

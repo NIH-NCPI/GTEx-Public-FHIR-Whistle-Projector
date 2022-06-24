@@ -19,5 +19,6 @@ def Transform_Dataset(resource) {
         var sequencing_centers: $Unique(resource.sample_attributes[*].smcenter);
         $this: ProcessSequencingCenter(resource.study, sequencing_centers[]);
         $this: ProcessSpecimenData(resource.study, resource.sample_attributes[]);
+        $this: ProcessSpecimenTask(resource.study, resource.sample_attributes[]);
     }
 }
