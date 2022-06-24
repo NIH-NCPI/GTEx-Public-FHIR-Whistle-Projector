@@ -22,7 +22,17 @@ def AgeAtEnrollmentObservation(study, subject) {
         code.coding[]: HarmonizeMapped("age", "subject_phenotype");
         code.coding[]: LocalCodeSystemReference(study.id, "subject_phenotype", "Age");
         
-        _valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "decade");
+        //_valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "decade");
+        var age_range: $StrSplit(age_at, "-");
+        valueRange.low.value: $ParseFloat(age_range[0]);
+        valueRange.low.unit: "year";
+        valueRange.low.system: "http://unitsofmeasure.org";
+        valueRange.low.code: "a";
+        valueRange.high.value: $ParseFloat(age_range[1]);
+        valueRange.high.unit: "year";
+        valueRange.high.system: "http://unitsofmeasure.org";
+        valueRange.high.code: "a";  
+        
         status: "final";
         resourceType: "Observation";
     }
