@@ -19,12 +19,12 @@ def Study(study) {
     if (study.consent_group?) {
         identifier[0]: Key_Identifier(study, "ResearchStudy", study.consent_group.code);
         description: $StrCat(study.study_desc, " ", study.consent_group.description);
-        title: $StrCat(study.study_title, " ", study.consent_group.title);
+        title: $StrCat(study.title, " ", study.consent_group.title);
         identifier[0].use: "official";       
     } else {
         identifier[0]: Key_Identifier(study, "ResearchStudy", study.id);
         identifier[0].use: "official";
-        title: study.study_title;
+        title: study.title;
         description: study.study_desc;
     }
 
