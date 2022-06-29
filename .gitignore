@@ -1,3 +1,8 @@
+# Local/Project specific files
+fhir_hosts
+activate
+todo
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
