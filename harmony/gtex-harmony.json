@@ -1,0 +1,4842 @@
+{
+  "id": "gtex-harmony",
+  "resourceType": "ConceptMap",
+  "version": "v1",
+  "group": [
+    {
+      "source": "FamilyRelationship",
+      "target": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "element": [
+        {
+          "code": "FAMMEMB",
+          "display": "Family Member",
+          "target": [
+            {
+              "code": "FAMMEMB",
+              "display": "family member",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "FamilyRelationship",
+      "target": "self",
+      "element": [
+        {
+          "code": "FAMMEMB",
+          "display": "Family Member",
+          "target": [
+            {
+              "code": "FAMMEMB",
+              "display": "Family Member",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sex",
+      "target": "http://hl7.org/fhir/administrative-gender",
+      "element": [
+        {
+          "code": "1",
+          "display": "Male",
+          "target": [
+            {
+              "code": "male",
+              "display": "Male",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "Female",
+          "target": [
+            {
+              "code": "female",
+              "display": "Female",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sex",
+      "target": "self",
+      "element": [
+        {
+          "code": "1",
+          "display": "Male",
+          "target": [
+            {
+              "code": "1",
+              "display": "Male",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "Female",
+          "target": [
+            {
+              "code": "2",
+              "display": "Female",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "DataType",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/data_types",
+      "element": [
+        {
+          "code": "bam",
+          "display": "BAM File",
+          "target": [
+            {
+              "code": "Aligned-Reads",
+              "display": "Aligned Reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "gvcf",
+          "display": "gvcf",
+          "target": [
+            {
+              "code": "gVCF",
+              "display": "gVCF",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "DataType",
+      "target": "self",
+      "element": [
+        {
+          "code": "bam",
+          "display": "BAM File",
+          "target": [
+            {
+              "code": "bam",
+              "display": "BAM File",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "gvcf",
+          "display": "gvcf",
+          "target": [
+            {
+              "code": "gvcf",
+              "display": "gvcf",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "access_type",
+      "target": "https://includedcc.org/fhir/code-systems/data_access_types",
+      "element": [
+        {
+          "code": "Controlled",
+          "display": "Controlled",
+          "target": [
+            {
+              "code": "controlled",
+              "display": "Controlled",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Registered",
+          "display": "Registered",
+          "target": [
+            {
+              "code": "registered",
+              "display": "Registered",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "access_type",
+      "target": "self",
+      "element": [
+        {
+          "code": "Controlled",
+          "display": "Controlled",
+          "target": [
+            {
+              "code": "Controlled",
+              "display": "Controlled",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Registered",
+          "display": "Registered",
+          "target": [
+            {
+              "code": "Registered",
+              "display": "Registered",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "DataCategory",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories",
+      "element": [
+        {
+          "code": "WHOLE_GENOME",
+          "display": "Whole Genome Sequencing",
+          "target": [
+            {
+              "code": "Genomics",
+              "display": "Genomics",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "DataCategory",
+      "target": "self",
+      "element": [
+        {
+          "code": "WHOLE_GENOME",
+          "display": "Whole Genome Sequencing",
+          "target": [
+            {
+              "code": "WHOLE_GENOME",
+              "display": "Whole Genome Sequencing",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ExperimentStrategy",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies",
+      "element": [
+        {
+          "code": "WGS",
+          "display": "Whole Genome Sequencing",
+          "target": [
+            {
+              "code": "WGS",
+              "display": "Whole Genome",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ExperimentStrategy",
+      "target": "self",
+      "element": [
+        {
+          "code": "WGS",
+          "display": "Whole Genome Sequencing",
+          "target": [
+            {
+              "code": "WGS",
+              "display": "Whole Genome Sequencing",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "OMNI",
+          "display": "Omni",
+          "target": [
+            {
+              "code": "OMNI",
+              "display": "Omni",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNASEQ",
+          "display": "RNA-Seq",
+          "target": [
+            {
+              "code": "RNASEQ",
+              "display": "RNA-Seq",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WES",
+          "display": "WES",
+          "target": [
+            {
+              "code": "WES",
+              "display": "WES",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WGS",
+          "display": "WGS",
+          "target": [
+            {
+              "code": "WGS",
+              "display": "WGS",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ExperimentStrategy",
+      "target": "https://includedcc.org/fhir/code-systems/experimental_strategies",
+      "element": [
+        {
+          "code": "OMNI",
+          "display": "Omni",
+          "target": [
+            {
+              "code": "Omni",
+              "display": "Omni Platform",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RNASEQ",
+          "display": "RNA-Seq",
+          "target": [
+            {
+              "code": "RNA-Seq",
+              "display": "RNA-Seq",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WES",
+          "display": "WES",
+          "target": [
+            {
+              "code": "WES",
+              "display": "Whole Exome Sequencing",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WGS",
+          "display": "WGS",
+          "target": [
+            {
+              "code": "GWS",
+              "display": "Whole Genome Sequencing",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "SampleType",
+      "target": "http://purl.obolibrary.org/obo/obi.owl",
+      "element": [
+        {
+          "code": "DNA",
+          "display": "DNA",
+          "target": [
+            {
+              "code": "OBI:0001051",
+              "display": "DNA extract",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "SampleType",
+      "target": "self",
+      "element": [
+        {
+          "code": "DNA",
+          "display": "DNA",
+          "target": [
+            {
+              "code": "DNA",
+              "display": "DNA",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "SMAFRZE_",
+      "target": "https://includedcc.org/fhir/code-systems/experimental_strategies",
+      "element": [
+        {
+          "code": "EXCLUDE",
+          "display": "Exclude",
+          "target": [
+            {
+              "code": "??",
+              "display": "??",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "SMAFRZE_",
+      "target": "self",
+      "element": [
+        {
+          "code": "EXCLUDE",
+          "display": "Exclude",
+          "target": [
+            {
+              "code": "EXCLUDE",
+              "display": "Exclude",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smtsd",
+      "target": "http://purl.obolibrary.org/obo/ncit.owl",
+      "element": [
+        {
+          "code": "Whole Blood",
+          "display": "Whole Blood",
+          "target": [
+            {
+              "code": "C41067",
+              "display": "Whole Blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Frontal Cortex (BA9)",
+          "display": "Brain - Frontal Cortex (BA9)",
+          "target": [
+            {
+              "code": "C177766",
+              "display": "Frontal Lobe Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Adipose - Subcutaneous",
+          "display": "Adipose - Subcutaneous",
+          "target": [
+            {
+              "code": "C33645",
+              "display": "Subcutis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Muscle - Skeletal",
+          "display": "Muscle - Skeletal",
+          "target": [
+            {
+              "code": "C13050",
+              "display": "Skeletal Muscle Tissue",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Artery - Tibial",
+          "display": "Artery - Tibial",
+          "target": [
+            {
+              "code": "C12824",
+              "display": "Tibial Artery",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Artery - Coronary",
+          "display": "Artery - Coronary",
+          "target": [
+            {
+              "code": "C12843",
+              "display": "Coronary Artery",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Heart - Atrial Appendage",
+          "display": "Heart - Atrial Appendage",
+          "target": [
+            {
+              "code": "C13023",
+              "display": "Heart Part",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Adipose - Visceral (Omentum)",
+          "display": "Adipose - Visceral (Omentum)",
+          "target": [
+            {
+              "code": "C33209",
+              "display": "Omentum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ovary",
+          "display": "Ovary",
+          "target": [
+            {
+              "code": "C12404",
+              "display": "Ovary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Uterus",
+          "display": "Uterus",
+          "target": [
+            {
+              "code": "C12405",
+              "display": "Uterus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Vagina",
+          "display": "Vagina",
+          "target": [
+            {
+              "code": "C12407",
+              "display": "Vagina",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Breast - Mammary Tissue",
+          "display": "Breast - Mammary Tissue",
+          "target": [
+            {
+              "code": "C12370",
+              "display": "Mammary Gland Tissue",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Skin - Not Sun Exposed (Suprapubic)",
+          "display": "Skin - Not Sun Exposed (Suprapubic)",
+          "target": [
+            {
+              "code": "C126736",
+              "display": "Suprapubic Skin",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Minor Salivary Gland",
+          "display": "Minor Salivary Gland",
+          "target": [
+            {
+              "code": "C33129",
+              "display": "Minor Salivary Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Cortex",
+          "display": "Brain - Cortex",
+          "target": [
+            {
+              "code": "C12443",
+              "display": "Cerebral Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Adrenal Gland",
+          "display": "Adrenal Gland",
+          "target": [
+            {
+              "code": "C12666",
+              "display": "Adrenal Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Thyroid",
+          "display": "Thyroid",
+          "target": [
+            {
+              "code": "C12400",
+              "display": "Thyroid Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Lung",
+          "display": "Lung",
+          "target": [
+            {
+              "code": "C12468",
+              "display": "Lung",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Spleen",
+          "display": "Spleen",
+          "target": [
+            {
+              "code": "C12432",
+              "display": "Spleen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Pancreas",
+          "display": "Pancreas",
+          "target": [
+            {
+              "code": "C12393",
+              "display": "Pancreas",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Esophagus - Muscularis",
+          "display": "Esophagus - Muscularis",
+          "target": [
+            {
+              "code": "C32540",
+              "display": "Esophageal Muscularis Mucosa",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Esophagus - Mucosa",
+          "display": "Esophagus - Mucosa",
+          "target": [
+            {
+              "code": "C32538",
+              "display": "Esophageal Mucosa",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Esophagus - Gastroesophageal Junction",
+          "display": "Esophagus - Gastroesophageal Junction",
+          "target": [
+            {
+              "code": "C32668",
+              "display": "Gastroesophageal Junction",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Stomach",
+          "display": "Stomach",
+          "target": [
+            {
+              "code": "C12391",
+              "display": "Stomach",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Colon - Sigmoid",
+          "display": "Colon - Sigmoid",
+          "target": [
+            {
+              "code": "C12384",
+              "display": "Sigmoid Colon",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Small Intestine - Terminal Ileum",
+          "display": "Small Intestine - Terminal Ileum",
+          "target": [
+            {
+              "code": "C33757",
+              "display": "Terminal Ileum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Colon - Transverse",
+          "display": "Colon - Transverse",
+          "target": [
+            {
+              "code": "C12385",
+              "display": "Transverse Colon",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Prostate",
+          "display": "Prostate",
+          "target": [
+            {
+              "code": "C12410",
+              "display": "Prostate Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Testis",
+          "display": "Testis",
+          "target": [
+            {
+              "code": "C12412",
+              "display": "Testis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Skin - Sun Exposed (Lower leg)",
+          "display": "Skin - Sun Exposed (Lower leg)",
+          "target": [
+            {
+              "code": "C52749",
+              "display": "Leg Skin",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Nerve - Tibial",
+          "display": "Nerve - Tibial",
+          "target": [
+            {
+              "code": "C52809",
+              "display": "Tibial Nerve",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Heart - Left Ventricle",
+          "display": "Heart - Left Ventricle",
+          "target": [
+            {
+              "code": "C12871",
+              "display": "Left Ventricle",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Pituitary",
+          "display": "Pituitary",
+          "target": [
+            {
+              "code": "C12399",
+              "display": "Pituitary Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Cerebellum",
+          "display": "Brain - Cerebellum",
+          "target": [
+            {
+              "code": "C12445",
+              "display": "Cerebellum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cells - Cultured fibroblasts",
+          "display": "Cells - Cultured fibroblasts",
+          "target": [
+            {
+              "code": "C12482",
+              "display": "Fibroblast",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Artery - Aorta",
+          "display": "Artery - Aorta",
+          "target": [
+            {
+              "code": "C12669",
+              "display": "Aorta",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cells - EBV-transformed lymphocytes",
+          "display": "Cells - EBV-transformed lymphocytes",
+          "target": [
+            {
+              "code": "C80283",
+              "display": "EBV-Transformed Mature B-Lymphocyte",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Cerebellar Hemisphere",
+          "display": "Brain - Cerebellar Hemisphere",
+          "target": [
+            {
+              "code": "C12351",
+              "display": "Cerebral Hemisphere",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Caudate (basal ganglia)",
+          "display": "Brain - Caudate (basal ganglia)",
+          "target": [
+            {
+              "code": "C12447",
+              "display": "Basal Ganglia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Nucleus accumbens (basal ganglia)",
+          "display": "Brain - Nucleus accumbens (basal ganglia)",
+          "target": [
+            {
+              "code": "C52733",
+              "display": "Accumbens Nucleus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Putamen (basal ganglia)",
+          "display": "Brain - Putamen (basal ganglia)",
+          "target": [
+            {
+              "code": "C12452",
+              "display": "Putamen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Hypothalamus",
+          "display": "Brain - Hypothalamus",
+          "target": [
+            {
+              "code": "C12458",
+              "display": "Hypothalamus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Spinal cord (cervical c-1)",
+          "display": "Brain - Spinal cord (cervical c-1)",
+          "target": [
+            {
+              "code": "C12464",
+              "display": "Spinal Cord",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Liver",
+          "display": "Liver",
+          "target": [
+            {
+              "code": "C12392",
+              "display": "Liver",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Hippocampus",
+          "display": "Brain - Hippocampus",
+          "target": [
+            {
+              "code": "C12444",
+              "display": "Hippocampus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Anterior cingulate cortex (BA24)",
+          "display": "Brain - Anterior cingulate cortex (BA24)",
+          "target": [
+            {
+              "code": "C139185",
+              "display": "Anterior Cingulate Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Substantia nigra",
+          "display": "Brain - Substantia nigra",
+          "target": [
+            {
+              "code": "C12453",
+              "display": "Substantia Nigra",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Kidney - Cortex",
+          "display": "Kidney - Cortex",
+          "target": [
+            {
+              "code": "C12739",
+              "display": "Renal Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Amygdala",
+          "display": "Brain - Amygdala",
+          "target": [
+            {
+              "code": "C12440",
+              "display": "Amygdala",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cervix - Ectocervix",
+          "display": "Cervix - Ectocervix",
+          "target": [
+            {
+              "code": "C12310",
+              "display": "Ectocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Fallopian Tube",
+          "display": "Fallopian Tube",
+          "target": [
+            {
+              "code": "C12403",
+              "display": "Fallopian Tube",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cervix - Endocervix",
+          "display": "Cervix - Endocervix",
+          "target": [
+            {
+              "code": "C12309",
+              "display": "Endocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Bladder",
+          "display": "Bladder",
+          "target": [
+            {
+              "code": "C12414",
+              "display": "Bladder",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Kidney - Medulla",
+          "display": "Kidney - Medulla",
+          "target": [
+            {
+              "code": "C12740",
+              "display": "Renal Medulla",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cells - Leukemia cell line (CML)",
+          "display": "Cells - Leukemia cell line (CML)",
+          "target": [
+            {
+              "code": "C16403",
+              "display": "Cell Line",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smtsd",
+      "target": "self",
+      "element": [
+        {
+          "code": "Whole Blood",
+          "display": "Whole Blood",
+          "target": [
+            {
+              "code": "Whole Blood",
+              "display": "Whole Blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Frontal Cortex (BA9)",
+          "display": "Brain - Frontal Cortex (BA9)",
+          "target": [
+            {
+              "code": "Brain - Frontal Cortex (BA9)",
+              "display": "Brain - Frontal Cortex (BA9)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Adipose - Subcutaneous",
+          "display": "Adipose - Subcutaneous",
+          "target": [
+            {
+              "code": "Adipose - Subcutaneous",
+              "display": "Adipose - Subcutaneous",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Muscle - Skeletal",
+          "display": "Muscle - Skeletal",
+          "target": [
+            {
+              "code": "Muscle - Skeletal",
+              "display": "Muscle - Skeletal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Artery - Tibial",
+          "display": "Artery - Tibial",
+          "target": [
+            {
+              "code": "Artery - Tibial",
+              "display": "Artery - Tibial",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Artery - Coronary",
+          "display": "Artery - Coronary",
+          "target": [
+            {
+              "code": "Artery - Coronary",
+              "display": "Artery - Coronary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Heart - Atrial Appendage",
+          "display": "Heart - Atrial Appendage",
+          "target": [
+            {
+              "code": "Heart - Atrial Appendage",
+              "display": "Heart - Atrial Appendage",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Adipose - Visceral (Omentum)",
+          "display": "Adipose - Visceral (Omentum)",
+          "target": [
+            {
+              "code": "Adipose - Visceral (Omentum)",
+              "display": "Adipose - Visceral (Omentum)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ovary",
+          "display": "Ovary",
+          "target": [
+            {
+              "code": "Ovary",
+              "display": "Ovary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Uterus",
+          "display": "Uterus",
+          "target": [
+            {
+              "code": "Uterus",
+              "display": "Uterus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Vagina",
+          "display": "Vagina",
+          "target": [
+            {
+              "code": "Vagina",
+              "display": "Vagina",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Breast - Mammary Tissue",
+          "display": "Breast - Mammary Tissue",
+          "target": [
+            {
+              "code": "Breast - Mammary Tissue",
+              "display": "Breast - Mammary Tissue",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Skin - Not Sun Exposed (Suprapubic)",
+          "display": "Skin - Not Sun Exposed (Suprapubic)",
+          "target": [
+            {
+              "code": "Skin - Not Sun Exposed (Suprapubic)",
+              "display": "Skin - Not Sun Exposed (Suprapubic)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Minor Salivary Gland",
+          "display": "Minor Salivary Gland",
+          "target": [
+            {
+              "code": "Minor Salivary Gland",
+              "display": "Minor Salivary Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Cortex",
+          "display": "Brain - Cortex",
+          "target": [
+            {
+              "code": "Brain - Cortex",
+              "display": "Brain - Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Adrenal Gland",
+          "display": "Adrenal Gland",
+          "target": [
+            {
+              "code": "Adrenal Gland",
+              "display": "Adrenal Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Thyroid",
+          "display": "Thyroid",
+          "target": [
+            {
+              "code": "Thyroid",
+              "display": "Thyroid",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Lung",
+          "display": "Lung",
+          "target": [
+            {
+              "code": "Lung",
+              "display": "Lung",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Spleen",
+          "display": "Spleen",
+          "target": [
+            {
+              "code": "Spleen",
+              "display": "Spleen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Pancreas",
+          "display": "Pancreas",
+          "target": [
+            {
+              "code": "Pancreas",
+              "display": "Pancreas",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Esophagus - Muscularis",
+          "display": "Esophagus - Muscularis",
+          "target": [
+            {
+              "code": "Esophagus - Muscularis",
+              "display": "Esophagus - Muscularis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Esophagus - Mucosa",
+          "display": "Esophagus - Mucosa",
+          "target": [
+            {
+              "code": "Esophagus - Mucosa",
+              "display": "Esophagus - Mucosa",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Esophagus - Gastroesophageal Junction",
+          "display": "Esophagus - Gastroesophageal Junction",
+          "target": [
+            {
+              "code": "Esophagus - Gastroesophageal Junction",
+              "display": "Esophagus - Gastroesophageal Junction",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Stomach",
+          "display": "Stomach",
+          "target": [
+            {
+              "code": "Stomach",
+              "display": "Stomach",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Colon - Sigmoid",
+          "display": "Colon - Sigmoid",
+          "target": [
+            {
+              "code": "Colon - Sigmoid",
+              "display": "Colon - Sigmoid",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Small Intestine - Terminal Ileum",
+          "display": "Small Intestine - Terminal Ileum",
+          "target": [
+            {
+              "code": "Small Intestine - Terminal Ileum",
+              "display": "Small Intestine - Terminal Ileum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Colon - Transverse",
+          "display": "Colon - Transverse",
+          "target": [
+            {
+              "code": "Colon - Transverse",
+              "display": "Colon - Transverse",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Prostate",
+          "display": "Prostate",
+          "target": [
+            {
+              "code": "Prostate",
+              "display": "Prostate",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Testis",
+          "display": "Testis",
+          "target": [
+            {
+              "code": "Testis",
+              "display": "Testis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Skin - Sun Exposed (Lower leg)",
+          "display": "Skin - Sun Exposed (Lower leg)",
+          "target": [
+            {
+              "code": "Skin - Sun Exposed (Lower leg)",
+              "display": "Skin - Sun Exposed (Lower leg)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Nerve - Tibial",
+          "display": "Nerve - Tibial",
+          "target": [
+            {
+              "code": "Nerve - Tibial",
+              "display": "Nerve - Tibial",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Heart - Left Ventricle",
+          "display": "Heart - Left Ventricle",
+          "target": [
+            {
+              "code": "Heart - Left Ventricle",
+              "display": "Heart - Left Ventricle",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Pituitary",
+          "display": "Pituitary",
+          "target": [
+            {
+              "code": "Pituitary",
+              "display": "Pituitary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Cerebellum",
+          "display": "Brain - Cerebellum",
+          "target": [
+            {
+              "code": "Brain - Cerebellum",
+              "display": "Brain - Cerebellum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cells - Cultured fibroblasts",
+          "display": "Cells - Cultured fibroblasts",
+          "target": [
+            {
+              "code": "Cells - Cultured fibroblasts",
+              "display": "Cells - Cultured fibroblasts",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Artery - Aorta",
+          "display": "Artery - Aorta",
+          "target": [
+            {
+              "code": "Artery - Aorta",
+              "display": "Artery - Aorta",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cells - EBV-transformed lymphocytes",
+          "display": "Cells - EBV-transformed lymphocytes",
+          "target": [
+            {
+              "code": "Cells - EBV-transformed lymphocytes",
+              "display": "Cells - EBV-transformed lymphocytes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Cerebellar Hemisphere",
+          "display": "Brain - Cerebellar Hemisphere",
+          "target": [
+            {
+              "code": "Brain - Cerebellar Hemisphere",
+              "display": "Brain - Cerebellar Hemisphere",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Caudate (basal ganglia)",
+          "display": "Brain - Caudate (basal ganglia)",
+          "target": [
+            {
+              "code": "Brain - Caudate (basal ganglia)",
+              "display": "Brain - Caudate (basal ganglia)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Nucleus accumbens (basal ganglia)",
+          "display": "Brain - Nucleus accumbens (basal ganglia)",
+          "target": [
+            {
+              "code": "Brain - Nucleus accumbens (basal ganglia)",
+              "display": "Brain - Nucleus accumbens (basal ganglia)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Putamen (basal ganglia)",
+          "display": "Brain - Putamen (basal ganglia)",
+          "target": [
+            {
+              "code": "Brain - Putamen (basal ganglia)",
+              "display": "Brain - Putamen (basal ganglia)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Hypothalamus",
+          "display": "Brain - Hypothalamus",
+          "target": [
+            {
+              "code": "Brain - Hypothalamus",
+              "display": "Brain - Hypothalamus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Spinal cord (cervical c-1)",
+          "display": "Brain - Spinal cord (cervical c-1)",
+          "target": [
+            {
+              "code": "Brain - Spinal cord (cervical c-1)",
+              "display": "Brain - Spinal cord (cervical c-1)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Liver",
+          "display": "Liver",
+          "target": [
+            {
+              "code": "Liver",
+              "display": "Liver",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Hippocampus",
+          "display": "Brain - Hippocampus",
+          "target": [
+            {
+              "code": "Brain - Hippocampus",
+              "display": "Brain - Hippocampus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Anterior cingulate cortex (BA24)",
+          "display": "Brain - Anterior cingulate cortex (BA24)",
+          "target": [
+            {
+              "code": "Brain - Anterior cingulate cortex (BA24)",
+              "display": "Brain - Anterior cingulate cortex (BA24)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Substantia nigra",
+          "display": "Brain - Substantia nigra",
+          "target": [
+            {
+              "code": "Brain - Substantia nigra",
+              "display": "Brain - Substantia nigra",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Kidney - Cortex",
+          "display": "Kidney - Cortex",
+          "target": [
+            {
+              "code": "Kidney - Cortex",
+              "display": "Kidney - Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Brain - Amygdala",
+          "display": "Brain - Amygdala",
+          "target": [
+            {
+              "code": "Brain - Amygdala",
+              "display": "Brain - Amygdala",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cervix - Ectocervix",
+          "display": "Cervix - Ectocervix",
+          "target": [
+            {
+              "code": "Cervix - Ectocervix",
+              "display": "Cervix - Ectocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Fallopian Tube",
+          "display": "Fallopian Tube",
+          "target": [
+            {
+              "code": "Fallopian Tube",
+              "display": "Fallopian Tube",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cervix - Endocervix",
+          "display": "Cervix - Endocervix",
+          "target": [
+            {
+              "code": "Cervix - Endocervix",
+              "display": "Cervix - Endocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Bladder",
+          "display": "Bladder",
+          "target": [
+            {
+              "code": "Bladder",
+              "display": "Bladder",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Kidney - Medulla",
+          "display": "Kidney - Medulla",
+          "target": [
+            {
+              "code": "Kidney - Medulla",
+              "display": "Kidney - Medulla",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Cells - Leukemia cell line (CML)",
+          "display": "Cells - Leukemia cell line (CML)",
+          "target": [
+            {
+              "code": "Cells - Leukemia cell line (CML)",
+              "display": "Cells - Leukemia cell line (CML)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smts",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "Blood",
+          "display": "Blood",
+          "target": [
+            {
+              "code": "119297000",
+              "display": "Blood specimen (specimen)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Muscle",
+          "display": "Muscle",
+          "target": [
+            {
+              "code": "705054005",
+              "display": "Muscle specimen (specimen)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Bone Marrow",
+          "display": "Bone Marrow",
+          "target": [
+            {
+              "code": "19359002",
+              "display": "Bone marrow specimen (specimen)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smts",
+      "target": "self",
+      "element": [
+        {
+          "code": "Blood",
+          "display": "Blood",
+          "target": [
+            {
+              "code": "Blood",
+              "display": "Blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Muscle",
+          "display": "Muscle",
+          "target": [
+            {
+              "code": "Muscle",
+              "display": "Muscle",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Bone Marrow",
+          "display": "Bone Marrow",
+          "target": [
+            {
+              "code": "Bone Marrow",
+              "display": "Bone Marrow",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smubrid",
+      "target": "http://purl.obolibrary.org/obo/uberon.owl",
+      "element": [
+        {
+          "code": "0013756",
+          "display": "0013756",
+          "target": [
+            {
+              "code": "UBERON:0013756",
+              "display": "venous blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0009834",
+          "display": "0009834",
+          "target": [
+            {
+              "code": "UBERON:0009834",
+              "display": "dorsolateral prefrontal cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002190",
+          "display": "0002190",
+          "target": [
+            {
+              "code": "UBERON:0002190",
+              "display": "subcutaneous adipose tissue",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0011907",
+          "display": "0011907",
+          "target": [
+            {
+              "code": "UBERON:0011907",
+              "display": "gastrocnemius medialis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0007610",
+          "display": "0007610",
+          "target": [
+            {
+              "code": "UBERON:0007610",
+              "display": "tibial artery",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001621",
+          "display": "0001621",
+          "target": [
+            {
+              "code": "UBERON:0001621",
+              "display": "coronary artery",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006631",
+          "display": "0006631",
+          "target": [
+            {
+              "code": "UBERON:0006631",
+              "display": "right atrium auricular region",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0010414",
+          "display": "0010414",
+          "target": [
+            {
+              "code": "UBERON:0010414",
+              "display": "omental fat pad",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000992",
+          "display": "0000992",
+          "target": [
+            {
+              "code": "UBERON:0000992",
+              "display": "ovary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000995",
+          "display": "0000995",
+          "target": [
+            {
+              "code": "UBERON:0000995",
+              "display": "uterus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000996",
+          "display": "0000996",
+          "target": [
+            {
+              "code": "UBERON:0000996",
+              "display": "vagina",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0008367",
+          "display": "0008367",
+          "target": [
+            {
+              "code": "UBERON:0008367",
+              "display": "breast epithelium",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0036149",
+          "display": "0036149",
+          "target": [
+            {
+              "code": "UBERON:0036149",
+              "display": "suprapubic skin",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006330",
+          "display": "0006330",
+          "target": [
+            {
+              "code": "UBERON:0006330",
+              "display": "anterior lingual gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001870",
+          "display": "0001870",
+          "target": [
+            {
+              "code": "UBERON:0001870",
+              "display": "frontal cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002369",
+          "display": "0002369",
+          "target": [
+            {
+              "code": "UBERON:0002369",
+              "display": "adrenal gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002046",
+          "display": "0002046",
+          "target": [
+            {
+              "code": "UBERON:0002046",
+              "display": "thyroid gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0008952",
+          "display": "0008952",
+          "target": [
+            {
+              "code": "UBERON:0008952",
+              "display": "upper lobe of left lung",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002106",
+          "display": "0002106",
+          "target": [
+            {
+              "code": "UBERON:0002106",
+              "display": "spleen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001150",
+          "display": "0001150",
+          "target": [
+            {
+              "code": "UBERON:0001150",
+              "display": "body of pancreas",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004648",
+          "display": "0004648",
+          "target": [
+            {
+              "code": "UBERON:0004648",
+              "display": "esophagus muscularis mucosa",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006920",
+          "display": "0006920",
+          "target": [
+            {
+              "code": "UBERON:0006920",
+              "display": "esophagus squamous epithelium",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004550",
+          "display": "0004550",
+          "target": [
+            {
+              "code": "UBERON:0004550",
+              "display": "gastroesophageal sphincter",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000945",
+          "display": "0000945",
+          "target": [
+            {
+              "code": "UBERON:0000945",
+              "display": "stomach",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001159",
+          "display": "0001159",
+          "target": [
+            {
+              "code": "UBERON:0001159",
+              "display": "sigmoid colon",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001211",
+          "display": "0001211",
+          "target": [
+            {
+              "code": "UBERON:0001211",
+              "display": "Peyer's patch",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001157",
+          "display": "0001157",
+          "target": [
+            {
+              "code": "UBERON:0001157",
+              "display": "transverse colon",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002367",
+          "display": "0002367",
+          "target": [
+            {
+              "code": "UBERON:0002367",
+              "display": "prostate gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000473",
+          "display": "0000473",
+          "target": [
+            {
+              "code": "UBERON:0000473",
+              "display": "testis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004264",
+          "display": "0004264",
+          "target": [
+            {
+              "code": "UBERON:0004264",
+              "display": "lower leg skin",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001323",
+          "display": "0001323",
+          "target": [
+            {
+              "code": "UBERON:0001323",
+              "display": "tibial nerve",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006566",
+          "display": "0006566",
+          "target": [
+            {
+              "code": "UBERON:0006566",
+              "display": "left ventricle myocardium",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000007",
+          "display": "0000007",
+          "target": [
+            {
+              "code": "UBERON:0000007",
+              "display": "pituitary gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002037",
+          "display": "0002037",
+          "target": [
+            {
+              "code": "UBERON:0002037",
+              "display": "cerebellum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001496",
+          "display": "0001496",
+          "target": [
+            {
+              "code": "UBERON:0001496",
+              "display": "ascending aorta",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001873",
+          "display": "0001873",
+          "target": [
+            {
+              "code": "UBERON:0001873",
+              "display": "caudate nucleus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001882",
+          "display": "0001882",
+          "target": [
+            {
+              "code": "UBERON:0001882",
+              "display": "nucleus accumbens",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001874",
+          "display": "0001874",
+          "target": [
+            {
+              "code": "UBERON:0001874",
+              "display": "putamen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001898",
+          "display": "0001898",
+          "target": [
+            {
+              "code": "UBERON:0001898",
+              "display": "hypothalamus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006469",
+          "display": "0006469",
+          "target": [
+            {
+              "code": "UBERON:0006469",
+              "display": "C1 segment of cervical spinal cord",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001114",
+          "display": "0001114",
+          "target": [
+            {
+              "code": "UBERON:0001114",
+              "display": "right lobe of liver",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001954",
+          "display": "0001954",
+          "target": [
+            {
+              "code": "UBERON:0001954",
+              "display": "Ammon's horn",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0009835",
+          "display": "0009835",
+          "target": [
+            {
+              "code": "UBERON:0009835",
+              "display": "anterior cingulate cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002038",
+          "display": "0002038",
+          "target": [
+            {
+              "code": "UBERON:0002038",
+              "display": "substantia nigra",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001225",
+          "display": "0001225",
+          "target": [
+            {
+              "code": "UBERON:0001225",
+              "display": "cortex of kidney",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001876",
+          "display": "0001876",
+          "target": [
+            {
+              "code": "UBERON:0001876",
+              "display": "amygdala",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0012249",
+          "display": "0012249",
+          "target": [
+            {
+              "code": "UBERON:0012249",
+              "display": "ectocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0003889",
+          "display": "0003889",
+          "target": [
+            {
+              "code": "UBERON:0003889",
+              "display": "fallopian tube",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000458",
+          "display": "0000458",
+          "target": [
+            {
+              "code": "UBERON:0000458",
+              "display": "endocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001255",
+          "display": "0001255",
+          "target": [
+            {
+              "code": "UBERON:0001255",
+              "display": "urinary bladder",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001293",
+          "display": "0001293",
+          "target": [
+            {
+              "code": "UBERON:0001293",
+              "display": "outer medulla of kidney",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smubrid",
+      "target": "self",
+      "element": [
+        {
+          "code": "0013756",
+          "display": "0013756",
+          "target": [
+            {
+              "code": "0013756",
+              "display": "0013756",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0013756",
+              "display": "0013756",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0009834",
+          "display": "0009834",
+          "target": [
+            {
+              "code": "0009834",
+              "display": "0009834",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0009834",
+              "display": "0009834",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002190",
+          "display": "0002190",
+          "target": [
+            {
+              "code": "0002190",
+              "display": "0002190",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0002190",
+              "display": "0002190",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0011907",
+          "display": "0011907",
+          "target": [
+            {
+              "code": "0011907",
+              "display": "0011907",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0011907",
+              "display": "0011907",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0007610",
+          "display": "0007610",
+          "target": [
+            {
+              "code": "0007610",
+              "display": "0007610",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0007610",
+              "display": "0007610",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001621",
+          "display": "0001621",
+          "target": [
+            {
+              "code": "0001621",
+              "display": "0001621",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001621",
+              "display": "0001621",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006631",
+          "display": "0006631",
+          "target": [
+            {
+              "code": "0006631",
+              "display": "0006631",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0006631",
+              "display": "0006631",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0010414",
+          "display": "0010414",
+          "target": [
+            {
+              "code": "0010414",
+              "display": "0010414",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0010414",
+              "display": "0010414",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000992",
+          "display": "0000992",
+          "target": [
+            {
+              "code": "0000992",
+              "display": "0000992",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0000992",
+              "display": "0000992",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000995",
+          "display": "0000995",
+          "target": [
+            {
+              "code": "0000995",
+              "display": "0000995",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0000995",
+              "display": "0000995",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000996",
+          "display": "0000996",
+          "target": [
+            {
+              "code": "0000996",
+              "display": "0000996",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0000996",
+              "display": "0000996",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0008367",
+          "display": "0008367",
+          "target": [
+            {
+              "code": "0008367",
+              "display": "0008367",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0008367",
+              "display": "0008367",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0036149",
+          "display": "0036149",
+          "target": [
+            {
+              "code": "0036149",
+              "display": "0036149",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0036149",
+              "display": "0036149",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006330",
+          "display": "0006330",
+          "target": [
+            {
+              "code": "0006330",
+              "display": "0006330",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0006330",
+              "display": "0006330",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001870",
+          "display": "0001870",
+          "target": [
+            {
+              "code": "0001870",
+              "display": "0001870",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001870",
+              "display": "0001870",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002369",
+          "display": "0002369",
+          "target": [
+            {
+              "code": "0002369",
+              "display": "0002369",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0002369",
+              "display": "0002369",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002046",
+          "display": "0002046",
+          "target": [
+            {
+              "code": "0002046",
+              "display": "0002046",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0002046",
+              "display": "0002046",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0008952",
+          "display": "0008952",
+          "target": [
+            {
+              "code": "0008952",
+              "display": "0008952",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0008952",
+              "display": "0008952",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002106",
+          "display": "0002106",
+          "target": [
+            {
+              "code": "0002106",
+              "display": "0002106",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0002106",
+              "display": "0002106",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001150",
+          "display": "0001150",
+          "target": [
+            {
+              "code": "0001150",
+              "display": "0001150",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001150",
+              "display": "0001150",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004648",
+          "display": "0004648",
+          "target": [
+            {
+              "code": "0004648",
+              "display": "0004648",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0004648",
+              "display": "0004648",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006920",
+          "display": "0006920",
+          "target": [
+            {
+              "code": "0006920",
+              "display": "0006920",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0006920",
+              "display": "0006920",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004550",
+          "display": "0004550",
+          "target": [
+            {
+              "code": "0004550",
+              "display": "0004550",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0004550",
+              "display": "0004550",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000945",
+          "display": "0000945",
+          "target": [
+            {
+              "code": "0000945",
+              "display": "0000945",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0000945",
+              "display": "0000945",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001159",
+          "display": "0001159",
+          "target": [
+            {
+              "code": "0001159",
+              "display": "0001159",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001159",
+              "display": "0001159",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001211",
+          "display": "0001211",
+          "target": [
+            {
+              "code": "0001211",
+              "display": "0001211",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001211",
+              "display": "0001211",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001157",
+          "display": "0001157",
+          "target": [
+            {
+              "code": "0001157",
+              "display": "0001157",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001157",
+              "display": "0001157",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002367",
+          "display": "0002367",
+          "target": [
+            {
+              "code": "0002367",
+              "display": "0002367",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0002367",
+              "display": "0002367",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000473",
+          "display": "0000473",
+          "target": [
+            {
+              "code": "0000473",
+              "display": "0000473",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0000473",
+              "display": "0000473",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004264",
+          "display": "0004264",
+          "target": [
+            {
+              "code": "0004264",
+              "display": "0004264",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0004264",
+              "display": "0004264",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001323",
+          "display": "0001323",
+          "target": [
+            {
+              "code": "0001323",
+              "display": "0001323",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001323",
+              "display": "0001323",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006566",
+          "display": "0006566",
+          "target": [
+            {
+              "code": "0006566",
+              "display": "0006566",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0006566",
+              "display": "0006566",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000007",
+          "display": "0000007",
+          "target": [
+            {
+              "code": "0000007",
+              "display": "0000007",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0000007",
+              "display": "0000007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002037",
+          "display": "0002037",
+          "target": [
+            {
+              "code": "0002037",
+              "display": "0002037",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0002037",
+              "display": "0002037",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0002009",
+          "display": "EFO_0002009",
+          "target": [
+            {
+              "code": "EFO_0002009",
+              "display": "EFO_0002009",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "EFO_0002009",
+              "display": "EFO_0002009",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001496",
+          "display": "0001496",
+          "target": [
+            {
+              "code": "0001496",
+              "display": "0001496",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001496",
+              "display": "0001496",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0000572",
+          "display": "EFO_0000572",
+          "target": [
+            {
+              "code": "EFO_0000572",
+              "display": "EFO_0000572",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "EFO_0000572",
+              "display": "EFO_0000572",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001873",
+          "display": "0001873",
+          "target": [
+            {
+              "code": "0001873",
+              "display": "0001873",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001873",
+              "display": "0001873",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001882",
+          "display": "0001882",
+          "target": [
+            {
+              "code": "0001882",
+              "display": "0001882",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001882",
+              "display": "0001882",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001874",
+          "display": "0001874",
+          "target": [
+            {
+              "code": "0001874",
+              "display": "0001874",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001874",
+              "display": "0001874",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001898",
+          "display": "0001898",
+          "target": [
+            {
+              "code": "0001898",
+              "display": "0001898",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001898",
+              "display": "0001898",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006469",
+          "display": "0006469",
+          "target": [
+            {
+              "code": "0006469",
+              "display": "0006469",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0006469",
+              "display": "0006469",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001114",
+          "display": "0001114",
+          "target": [
+            {
+              "code": "0001114",
+              "display": "0001114",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001114",
+              "display": "0001114",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001954",
+          "display": "0001954",
+          "target": [
+            {
+              "code": "0001954",
+              "display": "0001954",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001954",
+              "display": "0001954",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0009835",
+          "display": "0009835",
+          "target": [
+            {
+              "code": "0009835",
+              "display": "0009835",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0009835",
+              "display": "0009835",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002038",
+          "display": "0002038",
+          "target": [
+            {
+              "code": "0002038",
+              "display": "0002038",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0002038",
+              "display": "0002038",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001225",
+          "display": "0001225",
+          "target": [
+            {
+              "code": "0001225",
+              "display": "0001225",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001225",
+              "display": "0001225",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001876",
+          "display": "0001876",
+          "target": [
+            {
+              "code": "0001876",
+              "display": "0001876",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001876",
+              "display": "0001876",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0012249",
+          "display": "0012249",
+          "target": [
+            {
+              "code": "0012249",
+              "display": "0012249",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0012249",
+              "display": "0012249",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0003889",
+          "display": "0003889",
+          "target": [
+            {
+              "code": "0003889",
+              "display": "0003889",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0003889",
+              "display": "0003889",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000458",
+          "display": "0000458",
+          "target": [
+            {
+              "code": "0000458",
+              "display": "0000458",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0000458",
+              "display": "0000458",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001255",
+          "display": "0001255",
+          "target": [
+            {
+              "code": "0001255",
+              "display": "0001255",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001255",
+              "display": "0001255",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001293",
+          "display": "0001293",
+          "target": [
+            {
+              "code": "0001293",
+              "display": "0001293",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "0001293",
+              "display": "0001293",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0002067",
+          "display": "EFO_0002067",
+          "target": [
+            {
+              "code": "EFO_0002067",
+              "display": "EFO_0002067",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "EFO_0002067",
+              "display": "EFO_0002067",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smubrid",
+      "target": "http://purl.obolibrary.org/obo/ncit.owl",
+      "element": [
+        {
+          "code": "0013756",
+          "display": "0013756",
+          "target": [
+            {
+              "code": "C78730",
+              "display": "Venous Blood",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0009834",
+          "display": "0009834",
+          "target": [
+            {
+              "code": "C12443",
+              "display": "Cerebral Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002190",
+          "display": "0002190",
+          "target": [
+            {
+              "code": "C12472",
+              "display": "Adipose Tissue",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0011907",
+          "display": "0011907",
+          "target": [
+            {
+              "code": "C32666",
+              "display": "Gastrocnemius Muscle",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0007610",
+          "display": "0007610",
+          "target": [
+            {
+              "code": "C12824",
+              "display": "Tibial Artery",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001621",
+          "display": "0001621",
+          "target": [
+            {
+              "code": "C12843",
+              "display": "Coronary Artery",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006631",
+          "display": "0006631",
+          "target": [
+            {
+              "code": "C12868",
+              "display": "Right Atrium",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0010414",
+          "display": "0010414",
+          "target": [
+            {
+              "code": "C33209",
+              "display": "Omentum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000992",
+          "display": "0000992",
+          "target": [
+            {
+              "code": "C12404",
+              "display": "Ovary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000995",
+          "display": "0000995",
+          "target": [
+            {
+              "code": "C12405",
+              "display": "Uterus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000996",
+          "display": "0000996",
+          "target": [
+            {
+              "code": "C12407",
+              "display": "Vagina",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0008367",
+          "display": "0008367",
+          "target": [
+            {
+              "code": "C12971",
+              "display": "Breast",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0036149",
+          "display": "0036149",
+          "target": [
+            {
+              "code": "C126736",
+              "display": "Suprapubic Skin",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006330",
+          "display": "0006330",
+          "target": [
+            {
+              "code": "C32987",
+              "display": "Lingual Salivary Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001870",
+          "display": "0001870",
+          "target": [
+            {
+              "code": "C177766",
+              "display": "Frontal Lobe Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002369",
+          "display": "0002369",
+          "target": [
+            {
+              "code": "C12666",
+              "display": "Adrenal Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002046",
+          "display": "0002046",
+          "target": [
+            {
+              "code": "C12400",
+              "display": "Thyroid Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0008952",
+          "display": "0008952",
+          "target": [
+            {
+              "code": "C33021",
+              "display": "Upper Lobe of the Left Lung",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002106",
+          "display": "0002106",
+          "target": [
+            {
+              "code": "C12432",
+              "display": "Spleen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001150",
+          "display": "0001150",
+          "target": [
+            {
+              "code": "C12270",
+              "display": "Body of the Pancreas",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004648",
+          "display": "0004648",
+          "target": [
+            {
+              "code": "C32540",
+              "display": "Esophageal Muscularis Mucosa",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006920",
+          "display": "0006920",
+          "target": [
+            {
+              "code": "C49222",
+              "display": "Esophageal Squamous Epithelium",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004550",
+          "display": "0004550",
+          "target": [
+            {
+              "code": "C33009",
+              "display": "Lower Esophageal Sphincter",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000945",
+          "display": "0000945",
+          "target": [
+            {
+              "code": "C12391",
+              "display": "Stomach",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001159",
+          "display": "0001159",
+          "target": [
+            {
+              "code": "C12384",
+              "display": "Sigmoid Colon",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001211",
+          "display": "0001211",
+          "target": [
+            {
+              "code": "C12771",
+              "display": "Peyer Patch",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001157",
+          "display": "0001157",
+          "target": [
+            {
+              "code": "C12385",
+              "display": "Transverse Colon",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002367",
+          "display": "0002367",
+          "target": [
+            {
+              "code": "C12410",
+              "display": "Prostate Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000473",
+          "display": "0000473",
+          "target": [
+            {
+              "code": "C12412",
+              "display": "Testis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0004264",
+          "display": "0004264",
+          "target": [
+            {
+              "code": "C52749",
+              "display": "Leg Skin",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001323",
+          "display": "0001323",
+          "target": [
+            {
+              "code": "C52809",
+              "display": "Tibial Nerve",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006566",
+          "display": "0006566",
+          "target": [
+            {
+              "code": "C119295",
+              "display": "Ventricular Wall of the Heart",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000007",
+          "display": "0000007",
+          "target": [
+            {
+              "code": "C12399",
+              "display": "Pituitary Gland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002037",
+          "display": "0002037",
+          "target": [
+            {
+              "code": "C12445",
+              "display": "Cerebellum",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0002009",
+          "display": "EFO_0002009",
+          "target": [
+            {
+              "code": "C16403",
+              "display": "Cell Line",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001496",
+          "display": "0001496",
+          "target": [
+            {
+              "code": "C32150",
+              "display": "Ascending Aorta",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0000572",
+          "display": "EFO_0000572",
+          "target": [
+            {
+              "code": "C13013",
+              "display": "Lymphoblast",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001873",
+          "display": "0001873",
+          "target": [
+            {
+              "code": "C12451",
+              "display": "Caudate Nucleus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001882",
+          "display": "0001882",
+          "target": [
+            {
+              "code": "C52733",
+              "display": "Accumbens Nucleus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001874",
+          "display": "0001874",
+          "target": [
+            {
+              "code": "C12452",
+              "display": "Putamen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001898",
+          "display": "0001898",
+          "target": [
+            {
+              "code": "C12458",
+              "display": "Hypothalamus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0006469",
+          "display": "0006469",
+          "target": [
+            {
+              "code": "C12892",
+              "display": "Cervical Spinal Cord",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001114",
+          "display": "0001114",
+          "target": [
+            {
+              "code": "C33481",
+              "display": "Right Lobe of the Liver",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001954",
+          "display": "0001954",
+          "target": [
+            {
+              "code": "C32374",
+              "display": "Cornu Ammonis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0009835",
+          "display": "0009835",
+          "target": [
+            {
+              "code": "C52713",
+              "display": "Cingulate Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0002038",
+          "display": "0002038",
+          "target": [
+            {
+              "code": "C12453",
+              "display": "Substantia Nigra",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001225",
+          "display": "0001225",
+          "target": [
+            {
+              "code": "C12739",
+              "display": "Renal Cortex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001876",
+          "display": "0001876",
+          "target": [
+            {
+              "code": "C12440",
+              "display": "Amygdala",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0012249",
+          "display": "0012249",
+          "target": [
+            {
+              "code": "C12310",
+              "display": "Ectocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0003889",
+          "display": "0003889",
+          "target": [
+            {
+              "code": "C12403",
+              "display": "Fallopian Tube",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0000458",
+          "display": "0000458",
+          "target": [
+            {
+              "code": "C12309",
+              "display": "Endocervix",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001255",
+          "display": "0001255",
+          "target": [
+            {
+              "code": "C12414",
+              "display": "Bladder",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "0001293",
+          "display": "0001293",
+          "target": [
+            {
+              "code": "C12740",
+              "display": "Renal Medulla",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0002067",
+          "display": "EFO_0002067",
+          "target": [
+            {
+              "code": "C19437",
+              "display": "K-562",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "smubrid",
+      "target": "http://www.ebi.ac.uk/efo/efo.obo",
+      "element": [
+        {
+          "code": "EFO_0002009",
+          "display": "EFO_0002009",
+          "target": [
+            {
+              "code": "0002009",
+              "display": "fibroblast derived cell line",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0000572",
+          "display": "EFO_0000572",
+          "target": [
+            {
+              "code": "0000572",
+              "display": "lymphoblast",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EFO_0002067",
+          "display": "EFO_0002067",
+          "target": [
+            {
+              "code": "0002067",
+              "display": "K562",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "DataSet",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/DataSet",
+      "element": [
+        {
+          "code": "subject_phenotypes",
+          "display": "GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt",
+          "target": [
+            {
+              "code": "subject_phenotypes",
+              "display": "GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "sample_attributes",
+          "display": "GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt",
+          "target": [
+            {
+              "code": "sample_attributes",
+              "display": "GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "file_manifest",
+          "display": "file_manifest.csv",
+          "target": [
+            {
+              "code": "file_manifest",
+              "display": "file_manifest.csv",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "SEX",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/subject_phenotypes/SEX",
+      "element": [
+        {
+          "code": "1",
+          "display": "Male",
+          "target": [
+            {
+              "code": "1",
+              "display": "Male",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "Female",
+          "target": [
+            {
+              "code": "2",
+              "display": "Female",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "AGE",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/subject_phenotypes/AGE",
+      "element": [
+        {
+          "code": "20-29",
+          "display": "20-29",
+          "target": [
+            {
+              "code": "20-29",
+              "display": "20-29",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "30-39",
+          "display": "30-39",
+          "target": [
+            {
+              "code": "30-39",
+              "display": "30-39",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "40-49",
+          "display": "40-49",
+          "target": [
+            {
+              "code": "40-49",
+              "display": "40-49",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "50-59",
+          "display": "50-59",
+          "target": [
+            {
+              "code": "50-59",
+              "display": "50-59",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "60-69",
+          "display": "60-69",
+          "target": [
+            {
+              "code": "60-69",
+              "display": "60-69",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "70-79",
+          "display": "70-79",
+          "target": [
+            {
+              "code": "70-79",
+              "display": "70-79",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "DTHHRDY",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/subject_phenotypes/DTHHRDY",
+      "element": [
+        {
+          "code": "0",
+          "display": "All cases on a ventilator immediately before death.",
+          "target": [
+            {
+              "code": "0",
+              "display": "All cases on a ventilator immediately before death.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "1",
+          "display": "Violent and fast death Deaths due to accident, blunt force trauma or suicide, terminal phase estimated at < 10 min",
+          "target": [
+            {
+              "code": "1",
+              "display": "Violent and fast death Deaths due to accident, blunt force trauma or suicide, terminal phase estimated at < 10 min",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "Fast death of natural causes Sudden unexpected deaths of people who had been reasonably healthy, after a terminal phase estimated at < 1 hr (with sudden death from a myocardial infarction as a model cause of death for this category)",
+          "target": [
+            {
+              "code": "2",
+              "display": "Fast death of natural causes Sudden unexpected deaths of people who had been reasonably healthy, after a terminal phase estimated at < 1 hr (with sudden death from a myocardial infarction as a model cause of death for this category)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "display": "Intermediate death Death after a terminal phase of 1 to 24 hrs (not classifiable as 2 or 4)-patients who were ill but death was unexpected",
+          "target": [
+            {
+              "code": "3",
+              "display": "Intermediate death Death after a terminal phase of 1 to 24 hrs (not classifiable as 2 or 4)-patients who were ill but death was unexpected",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4",
+          "display": "Slow death Death after a long illness, with a terminal phase longer than 1 day (commonly cancer or chronic pulmonary disease). Deaths that are not unexpected",
+          "target": [
+            {
+              "code": "4",
+              "display": "Slow death Death after a long illness, with a terminal phase longer than 1 day (commonly cancer or chronic pulmonary disease). Deaths that are not unexpected",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "subject_phenotypes",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/subject_phenotypes",
+      "element": [
+        {
+          "code": "SUBJID",
+          "display": "SUBJID",
+          "target": [
+            {
+              "code": "SUBJID",
+              "display": "SUBJID",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SEX",
+          "display": "SEX",
+          "target": [
+            {
+              "code": "SEX",
+              "display": "SEX",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AGE",
+          "display": "AGE",
+          "target": [
+            {
+              "code": "AGE",
+              "display": "AGE",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DTHHRDY",
+          "display": "Death Circumstances-Hardy Scale",
+          "target": [
+            {
+              "code": "DTHHRDY",
+              "display": "Death Circumstances-Hardy Scale",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "SMATSSCR",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/sample_attributes/SMATSSCR",
+      "element": [
+        {
+          "code": "0",
+          "display": "None",
+          "target": [
+            {
+              "code": "0",
+              "display": "None",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "sample_attributes",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/sample_attributes",
+      "element": [
+        {
+          "code": "SAMPID",
+          "display": "Sample ID, GTEx Public Sample ID",
+          "target": [
+            {
+              "code": "SAMPID",
+              "display": "Sample ID, GTEx Public Sample ID",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMATSSCR",
+          "display": "Autolysis Score",
+          "target": [
+            {
+              "code": "SMATSSCR",
+              "display": "Autolysis Score",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNABTCH",
+          "display": "Nucleic Acid Isolation Batch ID",
+          "target": [
+            {
+              "code": "SMNABTCH",
+              "display": "Nucleic Acid Isolation Batch ID",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNABTCHT",
+          "display": "Type of nucleic acid isolation batch",
+          "target": [
+            {
+              "code": "SMNABTCHT",
+              "display": "Type of nucleic acid isolation batch",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNABTCHD",
+          "display": "Date of nucleic acid isolation batch",
+          "target": [
+            {
+              "code": "SMNABTCHD",
+              "display": "Date of nucleic acid isolation batch",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMGEBTCH",
+          "display": "Genotype or Expression Batch ID",
+          "target": [
+            {
+              "code": "SMGEBTCH",
+              "display": "Genotype or Expression Batch ID",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMGEBTCHD",
+          "display": "Date of genotype or expression batch",
+          "target": [
+            {
+              "code": "SMGEBTCHD",
+              "display": "Date of genotype or expression batch",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMGEBTCHT",
+          "display": "Type of genotype or expression batch",
+          "target": [
+            {
+              "code": "SMGEBTCHT",
+              "display": "Type of genotype or expression batch",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMCENTER",
+          "display": "Code for BSS collection site",
+          "target": [
+            {
+              "code": "SMCENTER",
+              "display": "Code for BSS collection site",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMPTHNTS",
+          "display": "Pathology Notes, notes from PRC Report",
+          "target": [
+            {
+              "code": "SMPTHNTS",
+              "display": "Pathology Notes, notes from PRC Report",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMRIN",
+          "display": "RIN Number",
+          "target": [
+            {
+              "code": "SMRIN",
+              "display": "RIN Number",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMTS",
+          "display": "Tissue Type, area from which the tissue sample was taken.  This is a parent value to SMTSD.",
+          "target": [
+            {
+              "code": "SMTS",
+              "display": "Tissue Type, area from which the tissue sample was taken.  This is a parent value to SMTSD.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMTSD",
+          "display": "Tissue Type, more specific detail of tissue type",
+          "target": [
+            {
+              "code": "SMTSD",
+              "display": "Tissue Type, more specific detail of tissue type",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMUBRID",
+          "display": "Uberon ID, anatomical location as described by the Uber Anatomy Ontology (UBERON)",
+          "target": [
+            {
+              "code": "SMUBRID",
+              "display": "Uberon ID, anatomical location as described by the Uber Anatomy Ontology (UBERON)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMTSISCH",
+          "display": "Total Ischemic time for a sample",
+          "target": [
+            {
+              "code": "SMTSISCH",
+              "display": "Total Ischemic time for a sample",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMTSPAX",
+          "display": "Time a sample spent in the PAXgene fixative",
+          "target": [
+            {
+              "code": "SMTSPAX",
+              "display": "Time a sample spent in the PAXgene fixative",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMAFRZE",
+          "display": "Samples included in the GTEx Analysis Freeze",
+          "target": [
+            {
+              "code": "SMAFRZE",
+              "display": "Samples included in the GTEx Analysis Freeze",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMGTC",
+          "display": "Name of the genotype gtc file",
+          "target": [
+            {
+              "code": "SMGTC",
+              "display": "Name of the genotype gtc file",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME2MPRT",
+          "display": "End 2 Mapping Rate: the number of End 2 mapped reads divided by the total number of End 1 reads",
+          "target": [
+            {
+              "code": "SME2MPRT",
+              "display": "End 2 Mapping Rate: the number of End 2 mapped reads divided by the total number of End 1 reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMCHMPRS",
+          "display": "Chimeric Pairs: Pairs whose mates map to different genes",
+          "target": [
+            {
+              "code": "SMCHMPRS",
+              "display": "Chimeric Pairs: Pairs whose mates map to different genes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNTRART",
+          "display": "Intragenic Rate: The fraction of reads that map within genes (within introns or exons)",
+          "target": [
+            {
+              "code": "SMNTRART",
+              "display": "Intragenic Rate: The fraction of reads that map within genes (within introns or exons)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNUMGPS",
+          "display": "Number of Gaps: Number of regions with \u22655 bases with zero coverage",
+          "target": [
+            {
+              "code": "SMNUMGPS",
+              "display": "Number of Gaps: Number of regions with \u22655 bases with zero coverage",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMAPRT",
+          "display": "Mapping Rate: Ratio of total mapped reads to total reads",
+          "target": [
+            {
+              "code": "SMMAPRT",
+              "display": "Mapping Rate: Ratio of total mapped reads to total reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMEXNCRT",
+          "display": "Exonic Rate: The fraction of reads that map within exons",
+          "target": [
+            {
+              "code": "SMEXNCRT",
+              "display": "Exonic Rate: The fraction of reads that map within exons",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SM550NRM",
+          "display": "5' 50-based normalization:  50 (this number is the value for the transcript end length parameter) refers to the definition of how many bases are considered at the end",
+          "target": [
+            {
+              "code": "SM550NRM",
+              "display": "5' 50-based normalization:  50 (this number is the value for the transcript end length parameter) refers to the definition of how many bases are considered at the end",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "this value is the ratio between the coverage at the 5' end and the average coverage of the full transcript, averaged over all transcripts",
+          "display": "this value is the ratio between the coverage at the 5' end and the average coverage of the full transcript, averaged over all transcripts",
+          "target": [
+            {
+              "code": "this value is the ratio between the coverage at the 5' end and the average coverage of the full transcript, averaged over all transcripts",
+              "display": "this value is the ratio between the coverage at the 5' end and the average coverage of the full transcript, averaged over all transcripts",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMGNSDTC",
+          "display": "Genes Detected: Total number of genes with at least 5 exon mapping reads.",
+          "target": [
+            {
+              "code": "SMGNSDTC",
+              "display": "Genes Detected: Total number of genes with at least 5 exon mapping reads.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMUNMPRT",
+          "display": "Unique Rate of Mapped: Unique reads divided by all mapped reads.",
+          "target": [
+            {
+              "code": "SMUNMPRT",
+              "display": "Unique Rate of Mapped: Unique reads divided by all mapped reads.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SM350NRM",
+          "display": "3' 50-base normalization: the ratio between the coverage at the 3' end and the average coverage of the full transcript, averaged over all transcripts",
+          "target": [
+            {
+              "code": "SM350NRM",
+              "display": "3' 50-base normalization: the ratio between the coverage at the 3' end and the average coverage of the full transcript, averaged over all transcripts",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMRDLGTH",
+          "display": "Read Length: maximum detected read length found.",
+          "target": [
+            {
+              "code": "SMRDLGTH",
+              "display": "Read Length: maximum detected read length found.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMNCPB",
+          "display": "Mean Coverage Per Base: Coverage is averaged per base across each transcript, and averaged again across all transcripts.",
+          "target": [
+            {
+              "code": "SMMNCPB",
+              "display": "Mean Coverage Per Base: Coverage is averaged per base across each transcript, and averaged again across all transcripts.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME1MMRT",
+          "display": "End 1 Mismatch Rate: The number of End 1 bases not matching the reference divided by the total number of End 1 bases.",
+          "target": [
+            {
+              "code": "SME1MMRT",
+              "display": "End 1 Mismatch Rate: The number of End 1 bases not matching the reference divided by the total number of End 1 bases.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMSFLGTH",
+          "display": "Fragment Length StdDev: The fragment length is the distance between the start of an upstream read and the end of the downstream pair mate",
+          "target": [
+            {
+              "code": "SMSFLGTH",
+              "display": "Fragment Length StdDev: The fragment length is the distance between the start of an upstream read and the end of the downstream pair mate",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMESTLBS",
+          "display": "Estimated library size: Number of expected fragments based on the total reads and duplication rate assuming a Poisson distribution.",
+          "target": [
+            {
+              "code": "SMESTLBS",
+              "display": "Estimated library size: Number of expected fragments based on the total reads and duplication rate assuming a Poisson distribution.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMPPD",
+          "display": "Mapped: Total number of reads aligned/mapped",
+          "target": [
+            {
+              "code": "SMMPPD",
+              "display": "Mapped: Total number of reads aligned/mapped",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNTERRT",
+          "display": "Intergenic Rate: The fraction of reads that map to the genomic space between genes",
+          "target": [
+            {
+              "code": "SMNTERRT",
+              "display": "Intergenic Rate: The fraction of reads that map to the genomic space between genes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMRRNANM",
+          "display": "rRNA: Number of all reads (duplicate and non-duplicate) aligning to ribosomal RNA regions",
+          "target": [
+            {
+              "code": "SMRRNANM",
+              "display": "rRNA: Number of all reads (duplicate and non-duplicate) aligning to ribosomal RNA regions",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMRDTTL",
+          "display": "Total: Total reads (filtered to exclude reads with vendor fail or alternative alignment flags)",
+          "target": [
+            {
+              "code": "SMRDTTL",
+              "display": "Total: Total reads (filtered to exclude reads with vendor fail or alternative alignment flags)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMVQCFL",
+          "display": "Failed Vendor QC Check: reads having been designated as failed by the sequencer",
+          "target": [
+            {
+              "code": "SMVQCFL",
+              "display": "Failed Vendor QC Check: reads having been designated as failed by the sequencer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMNCV",
+          "display": "mean coefficient of variation: standard deviation in base coverage divided by mean coverage",
+          "target": [
+            {
+              "code": "SMMNCV",
+              "display": "mean coefficient of variation: standard deviation in base coverage divided by mean coverage",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMTRSCPT",
+          "display": "Transcripts Detected: Total number of transcripts with at least 5 exon mapping reads",
+          "target": [
+            {
+              "code": "SMTRSCPT",
+              "display": "Transcripts Detected: Total number of transcripts with at least 5 exon mapping reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMPPDPR",
+          "display": "Mapped Pairs:Total number of pairs for which both ends map",
+          "target": [
+            {
+              "code": "SMMPPDPR",
+              "display": "Mapped Pairs:Total number of pairs for which both ends map",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMCGLGTH",
+          "display": "Cumulative Gap Length: Cumulative length of gap regions",
+          "target": [
+            {
+              "code": "SMCGLGTH",
+              "display": "Cumulative Gap Length: Cumulative length of gap regions",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMGAPPCT",
+          "display": "Gap Percentage: The total cumulative gap length divided by the total cumulative transcript lengths",
+          "target": [
+            {
+              "code": "SMGAPPCT",
+              "display": "Gap Percentage: The total cumulative gap length divided by the total cumulative transcript lengths",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMUNPDRD",
+          "display": "Unpaired Reads: number of reads lacking a pair mate",
+          "target": [
+            {
+              "code": "SMUNPDRD",
+              "display": "Unpaired Reads: number of reads lacking a pair mate",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNTRNRT",
+          "display": "Intronic Rate: The fraction of reads that map within introns",
+          "target": [
+            {
+              "code": "SMNTRNRT",
+              "display": "Intronic Rate: The fraction of reads that map within introns",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMPUNRT",
+          "display": "Mapped Unique Rate of Total: Ratio of mapping of reads that were aligned and were not duplicates to total reads",
+          "target": [
+            {
+              "code": "SMMPUNRT",
+              "display": "Mapped Unique Rate of Total: Ratio of mapping of reads that were aligned and were not duplicates to total reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMEXPEFF",
+          "display": "Expression Profiling Efficiency: Ratio of exon reads to total reads",
+          "target": [
+            {
+              "code": "SMEXPEFF",
+              "display": "Expression Profiling Efficiency: Ratio of exon reads to total reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMPPDUN",
+          "display": "Mapped Unique: Number of reads that were aligned and did not have duplicate flags",
+          "target": [
+            {
+              "code": "SMMPPDUN",
+              "display": "Mapped Unique: Number of reads that were aligned and did not have duplicate flags",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME2MMRT",
+          "display": "End 2 Mismatch Rate: The number of End 2 bases not matching the reference divided by the total number of End 2 bases.",
+          "target": [
+            {
+              "code": "SME2MMRT",
+              "display": "End 2 Mismatch Rate: The number of End 2 bases not matching the reference divided by the total number of End 2 bases.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME2ANTI",
+          "display": "End 2 Antisense: Number of reads that were sequenced in the antisense direction",
+          "target": [
+            {
+              "code": "SME2ANTI",
+              "display": "End 2 Antisense: Number of reads that were sequenced in the antisense direction",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMALTALG",
+          "display": "Alternative Aligments: duplicate read entries providing alternative coordinates",
+          "target": [
+            {
+              "code": "SMALTALG",
+              "display": "Alternative Aligments: duplicate read entries providing alternative coordinates",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME2SNSE",
+          "display": "End 2 Sense: Number of End 2 reads that were sequenced in the sense direction",
+          "target": [
+            {
+              "code": "SME2SNSE",
+              "display": "End 2 Sense: Number of End 2 reads that were sequenced in the sense direction",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMMFLGTH",
+          "display": "Fragment Length Mean: The fragment length is the distance between the start of an upstream read and the end of the downstream pair mate",
+          "target": [
+            {
+              "code": "SMMFLGTH",
+              "display": "Fragment Length Mean: The fragment length is the distance between the start of an upstream read and the end of the downstream pair mate",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMSPLTRD",
+          "display": "Split Reads: The number of reads that span an exon-exon boundary",
+          "target": [
+            {
+              "code": "SMSPLTRD",
+              "display": "Split Reads: The number of reads that span an exon-exon boundary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME1ANTI",
+          "display": "End 1 Antisense: Number of End 1 reads that were sequenced in the antisense direction",
+          "target": [
+            {
+              "code": "SME1ANTI",
+              "display": "End 1 Antisense: Number of End 1 reads that were sequenced in the antisense direction",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMBSMMRT",
+          "display": "Base Mismatch Rate: Number of bases not matching the reference divided by the total number of bases aligned.",
+          "target": [
+            {
+              "code": "SMBSMMRT",
+              "display": "Base Mismatch Rate: Number of bases not matching the reference divided by the total number of bases aligned.",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME1SNSE",
+          "display": "End 1 Sense: Number of End 1 reads that were sequenced in the sense direction",
+          "target": [
+            {
+              "code": "SME1SNSE",
+              "display": "End 1 Sense: Number of End 1 reads that were sequenced in the sense direction",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME1PCTS",
+          "display": "End 1 % Sense: Percentage of intragenic End 1 reads that were sequenced in the sense direction",
+          "target": [
+            {
+              "code": "SME1PCTS",
+              "display": "End 1 % Sense: Percentage of intragenic End 1 reads that were sequenced in the sense direction",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMRRNART",
+          "display": "rRNA Rate: Ratio of all reads aligned to rRNA regions to total reads",
+          "target": [
+            {
+              "code": "SMRRNART",
+              "display": "rRNA Rate: Ratio of all reads aligned to rRNA regions to total reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME1MPRT",
+          "display": "End 1 Mapping Rate: the number of End 1 mapped reads divided by the total number of End 1 reads",
+          "target": [
+            {
+              "code": "SME1MPRT",
+              "display": "End 1 Mapping Rate: the number of End 1 mapped reads divided by the total number of End 1 reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMNUM5CD",
+          "display": "Number Covered 5': The number of transcripts that have at least one read in their 5' end",
+          "target": [
+            {
+              "code": "SMNUM5CD",
+              "display": "Number Covered 5': The number of transcripts that have at least one read in their 5' end",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SMDPMPRT",
+          "display": "Duplication Rate of Mapped: Duplicate reads divided by total mapped reads",
+          "target": [
+            {
+              "code": "SMDPMPRT",
+              "display": "Duplication Rate of Mapped: Duplicate reads divided by total mapped reads",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SME2PCTS",
+          "display": "End 2 % Sense: Percentage of intragenic End 2 reads that were sequenced in the sense direction",
+          "target": [
+            {
+              "code": "SME2PCTS",
+              "display": "End 2 % Sense: Percentage of intragenic End 2 reads that were sequenced in the sense direction",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "file_manifest",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/GTEx/file_manifest",
+      "element": [
+        {
+          "code": "filename",
+          "display": "filename",
+          "target": [
+            {
+              "code": "filename",
+              "display": "filename",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "subjid",
+          "display": "subjid",
+          "target": [
+            {
+              "code": "subjid",
+              "display": "subjid",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "sampid",
+          "display": "sample_id",
+          "target": [
+            {
+              "code": "sampid",
+              "display": "sample_id",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "url",
+          "display": "url",
+          "target": [
+            {
+              "code": "url",
+              "display": "url",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
