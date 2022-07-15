@@ -4,7 +4,7 @@ study_title: Genotype-Tissue Expression (GTEx)
 study_desc: This study contains open access data from the The Genotype-Tissue Expression (GTEx) project. More details can be found at [www.gtexportal.org](http://www.gtexportal.org).
 study_sponsor:
   id: nhgri
-  name: National Human Genome Research Institude (NHGRI)
+  name: National Human Genome Research Institute (NHGRI)
 url: https://gtexportal.org
 identifier_prefix: https://anvilproject.org/gtex/fhir
 output_filename: gtex-v8
