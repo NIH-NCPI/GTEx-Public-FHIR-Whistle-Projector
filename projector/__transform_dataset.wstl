@@ -13,6 +13,7 @@ def Transform_Dataset(resource) {
         $this: ProcessGroup(resource.study, resource.subject_phenotypes[*]);
         $this: ProcessStudy(resource.study);
         $this: ProcessResearchSubject(resource.study, resource.subject_phenotypes[]);
+        $this: ProcessRowLevelSubjectPhenotypes(resource.study, resource.subject_phenotypes[]);
     }
 
     if resource.sample_attributes? {
