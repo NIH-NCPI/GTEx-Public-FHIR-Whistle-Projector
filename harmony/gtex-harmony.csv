@@ -9,11 +9,6 @@ Registered,Registered,sequencing,access_type,access_type,registered,Registered,h
 WHOLE_GENOME,Whole Genome Sequencing,sequencing,exome_capture_platform,DataCategory,Genomics,Genomics,https://nih-ncpi.github.io/ncpi-fhir-ig/data_categories,
 WGS,Whole Genome Sequencing,sequencing,sequencing_assay,ExperimentStrategy,WGS,Whole Genome,https://nih-ncpi.github.io/ncpi-fhir-ig/experimental_strategies,
 DNA,DNA,sequencing,analyte_type,SampleType,OBI:0001051,DNA extract,http://purl.obolibrary.org/obo/obi.owl,
-0,Ventilator Case,subject_phenotype,DTHHRDY,DTHHRDY,Ventilator-Case,Ventilator Case,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
-1,Violent and fast death,subject_phenotype,DTHHRDY,DTHHRDY,Violent-fast-death,Violent and fast death,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
-2,Fast death of natural causes,subject_phenotype,DTHHRDY,DTHHRDY,Fast-death-of-natural-causes,Fast death of natural causes,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
-3,Intermediate death,subject_phenotype,DTHHRDY,DTHHRDY,Intermediate-death,Intermediate death,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
-4,Slow death,subject_phenotype,DTHHRDY,DTHHRDY,Slow-death,Slow death,https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/GTEx/subject_phenotypes/DTHHRDY,
 EXCLUDE,Exclude,sample_attributes,SMAFRZE_,SMAFRZE_,??,??,https://includedcc.org/fhir/code-systems/experimental_strategies
 OMNI,Omni,sample_attributes,SMAFRZE,ExperimentStrategy,Omni,Omni Platform,https://includedcc.org/fhir/code-systems/experimental_strategies
 RNASEQ,RNA-Seq,sample_attributes,SMAFRZE,ExperimentStrategy,RNA-Seq,RNA-Seq,https://includedcc.org/fhir/code-systems/experimental_strategies
