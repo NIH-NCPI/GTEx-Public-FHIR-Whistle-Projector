@@ -1,0 +1,47 @@
+// 
+// Representing Row Level data using Observations with components
+//
+
+def BuildObsComponentString(study, table_name, varname, required value) {
+    code.coding[]: LocalCodeSystemReference(study.id, table_name, varname);
+    valueString: value;
+}
+
+def BuildObsComponentCategorical(study, table_name, varname, required value) {
+    code.coding[]: LocalCodeSystemReference(study.id, table_name, varname);
+    valueCodeableConcept.coding[]: Harmonize(value, varname);
+    //valueCodeableConcept.coding[]: LocalVarCodeSystemReference(study.id, table_name, varname, value);
+}
+
+// We get a single observation per row for any given table. 
+// For each table, we'll have a different set of columns, where
+// each column is represented by a different component. In 
+// this case, we'll captured each of the columns (where data
+// is present) for a single row in the subject_phenotypes table
+// as a single observation
+def BuildRowObservationSubjectPhenotypes(study, row_data) {
+    var table_name: "subject_phenotypes";
+    meta.tag[]: StudyMeta(study);
+    identifier[]: Key_Identifier(study, "Observation", $StrCat(study.id, ".", table_name, ".", row_data.subjid));
+    identifier[0].use: "official";
+    status: "final";
+    resourceType: "Observation";
+
+    code.coding[]: BuildCoding("74468-0", "Questionnaire form definition Document", "https://loinc.org/");
+    code.coding[]: HarmonizeMapped("subject_phenotypes", "DataSet");
+    code.text: "Row level data for data table, subject_phenotypes";
+
+    // We do have a subject...
+    subject: Reference_Key_Identifier(study, "Patient", row_data.subjid);
+
+    component[]: BuildObsComponentString(study, table_name, "SUBJID", row_data.subjid);
+    component[]: BuildObsComponentCategorical(study, table_name, "SEX", row_data.sex);
+    component[]: BuildObsComponentCategorical(study, table_name, "AGE", row_data.age);
+    //component[]: BuildObsComponentCategorical(study, table_name, "DTHHRDY", row_data.dthhrdy);
+    
+    component[]: BuildObsComponentCategorical(study, table_name, "DTHHRDY", row_data.dthhrdy);
+}
+
+def ProcessRowLevelSubjectPhenotypes(study, row) {
+    out row_level: BuildRowObservationSubjectPhenotypes(study, row);
+}
