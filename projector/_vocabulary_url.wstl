@@ -11,8 +11,8 @@
 // be present. 
 def VocabularyURL(required study_id, required table_name, varname) {
   if ($IsNil(varname)) {
-    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/", study_id, "/", table_name);
+    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/", study_id, "/", table_name);
   } else {
-    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/data-dictionary/", study_id, "/", table_name, "/", varname); 
+    $this: $StrCat("https://nih-ncpi.github.io/ncpi-fhir-ig/CS/data-dictionary/", study_id, "/", table_name, "/", varname); 
   }
 }
