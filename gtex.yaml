@@ -15,6 +15,10 @@ require_official: True
 curies:
   http://purl.obolibrary.org/obo/uberon.owl: UBERON
 projector_lib: projector
+env:
+  dev: dev
+  qa: dev-fhir-cat
+  prod: fhir-cat
 dataset:
   subject_phenotypes: 
     filename: data/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt
