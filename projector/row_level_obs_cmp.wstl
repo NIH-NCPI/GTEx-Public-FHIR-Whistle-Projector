@@ -3,14 +3,14 @@
 //
 
 def BuildObsComponentString(study, table_name, varname, required value) {
-    code.coding[]: LocalCodeSystemReference(study.id, table_name, varname);
+    code.coding: HarmonizeMapped(varname, table_name);
     valueString: value;
 }
 
 def BuildObsComponentCategorical(study, table_name, varname, required value) {
-    code.coding[]: LocalCodeSystemReference(study.id, table_name, varname);
+    code.coding: HarmonizeMapped(varname, table_name);
     valueCodeableConcept.coding[]: Harmonize(value, varname);
-    //valueCodeableConcept.coding[]: LocalVarCodeSystemReference(study.id, table_name, varname, value);
+
 }
 
 // We get a single observation per row for any given table. 
