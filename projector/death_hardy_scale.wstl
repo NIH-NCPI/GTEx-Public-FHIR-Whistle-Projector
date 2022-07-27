@@ -11,9 +11,8 @@ def DeathCircumstances_HardyScale(study, subject) {
         identifier[0].use: "official";
 
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
-        code.text: HarmonizedLocalDisplay("dthhrdy", "subject_phenotype");
-        code.coding[]: HarmonizeMapped("dthhrdy", "subject_phenotype");
-        code.coding[]: LocalCodeSystemReference(study.id, "subject_phenotype", "dthhrdy");
+        code.text: HarmonizedLocalDisplay("DTHHRDY", "subject_phenotypes");
+        code.coding[]: HarmonizeMapped("DTHHRDY", "subject_phenotypes");
 
         valueCodeableConcept.coding: HarmonizeMapped(dthhrdy, "DTHHRDY");
         valueCodeableConcept.text: dthhrdy;

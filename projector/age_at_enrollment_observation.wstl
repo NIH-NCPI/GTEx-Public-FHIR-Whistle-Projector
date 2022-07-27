@@ -18,11 +18,9 @@ def AgeAtEnrollmentObservation(study, subject) {
         subject: Reference_Key_Identifier(study, "Patient", subject_id);
         // Technically, this is supposed to work, but it doesn't
         // basedOn[].identifier: Key_Identifier(study, "ObservationDefinition", DdVariableId(study.id, "subject_phenotype", "Age at enrollment (d)"));
-        code.text: HarmonizedLocalDisplay("age", "subject_phenotype");
-        code.coding[]: HarmonizeMapped("age", "subject_phenotype");
-        code.coding[]: LocalCodeSystemReference(study.id, "subject_phenotype", "Age");
+        code.text: HarmonizedLocalDisplay("AGE", "subject_phenotypes");
+        code.coding[]: HarmonizeMapped("AGE", "subject_phenotypes");
         
-        //_valueDateTime.extension[0]: AgeAtExtension(study, subject_id, age_at, "decade");
         var age_range: $StrSplit(age_at, "-");
         valueRange.low.value: $ParseFloat(age_range[0]);
         valueRange.low.unit: "year";

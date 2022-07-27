@@ -28,9 +28,7 @@ def DdVariable(study, table_name, dd_entry, permDataType) {
     identifier[0].use: "official";
     permittedDataType: permDataType;
     
-    code.coding[0].code: dd_entry.varname;
-    code.coding[0].system: VocabularyURL(study.id, table_name, "");
-    code.coding[0].display: dd_entry.desc;
+    code.coding[]: HarmonizeMapped(dd_entry.varname, table_name);
     code.text: dd_entry.desc;
 
     if (permDataType = "Quantity") {

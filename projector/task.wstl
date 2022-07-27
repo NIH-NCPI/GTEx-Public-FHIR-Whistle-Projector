@@ -17,8 +17,7 @@ def InOutFileReferences(study, manifest) {
 def InOutQuantityComponent(study, tablename, varname, value) {
 
     if (value?) {
-        type.coding[0].code: varname;
-        type.coding[0].system: VocabularyURL(study.id, tablename, "");
+        type.coding[]: HarmonizeMapped(varname, tablename);
         valueQuantity.value: $ParseFloat(value);
     }
 }

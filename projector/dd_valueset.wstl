@@ -19,16 +19,14 @@ def BuildValueSet(study, cs_entry) {
         identifier[0].use: "official";
         name: BuildVariableTerminologyId(cs_entry.study, cs_entry.table_name, cs_entry.varname);
         title: $StrCat("ValueSet for all values associated with variable, ", cs_entry.table_name, ".", cs_entry.varname, ", from study, ", cs_entry.study, ".");
-        url: VocabularyURL(cs_entry.study, cs_entry.table_name, $StrCat(cs_entry.varname, "-VS"));
-        compose.include[0].system: VocabularyURL(cs_entry.study, cs_entry.table_name, cs_entry.varname);
     } else {
         identifier[]: Key_Identifier(study, "ValueSet", $StrCat(cs_entry.study, ".", cs_entry.table_name));
         identifier[0].use: "official";
         name: BuildTableTerminologyId(cs_entry.study, cs_entry.table_name);
         title: $StrCat("ValueSet for all variables associated with table, ", cs_entry.table_name, ", from study, ", cs_entry.study, ".");
-        url: VocabularyURL(cs_entry.study, $StrCat(cs_entry.table_name, "-VS"), "");
-        compose.include[0].system: VocabularyURL(cs_entry.study, cs_entry.table_name, "");
     }
+    url: $StrCat(cs_entry.url, "-VS");
+    compose.include[0].system: cs_entry.url;
     status: "active";
     publisher: "NCPI FHIR Working Group";
     resourceType: "ValueSet";
